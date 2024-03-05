@@ -3,4 +3,4 @@
 
 My own website source code.
 
-You can check a live version here: [](https://jbbal.fr)
+You can check a live version [here](https://jbbal.fr).
