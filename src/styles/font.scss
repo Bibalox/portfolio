@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+// Global properties
+
+:root {
+  font-family: "Quicksand", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+
+// Title
+
+.title {
+
+  &-sm {
+    font-size:    2.4rem;
+    line-height:  3.6rem;
+
+    font-weight:  700;
+  }
+
+  &-md {
+    font-size:    3.2rem;
+    line-height:  4.4rem;
+
+    font-weight:  700;
+  }
+
+  &-lg {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+
+    font-weight: 700;
+  }
+
+}
+
+
+// Paragraphs
+
+.paragraph {
+
+  &-xs {
+    font-size:    1.6rem;
+    line-height:  2.4rem;
+  }
+
+  &-sm {
+    font-size:    1.8rem;
+    line-height:  3.0rem;
+  }
+
+  &-md {
+    font-size:    2.0rem;
+    line-height:  3.6rem;
+  }
+
+  &-lg {
+    font-size:    2.4rem;
+    line-height:  4.0rem;
+  }
+
+}
+
+
+// Labels
+
+.label {
+
+  &-xs {
+    font-size:    1.0rem;
+    line-height:  1.2rem;
+  }
+
+  &-sm {
+    font-size:    1.6rem;
+    line-height:  1.8rem;
+  }
+
+  &-md {
+    font-size:    1.8rem;
+    line-height:  2.2rem;
+  }
+
+  &-lg {
+    font-size:    2.4rem;
+    line-height:  2.8rem;
+  }
+
+}

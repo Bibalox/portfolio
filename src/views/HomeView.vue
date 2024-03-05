@@ -1,15 +1,13 @@
 <script setup lang="ts">
+import TheToto from '@/components/TheToto.vue'
 </script>
 
 <template>
   <main>
-    <span class="test__toto">Hello world!</span>
+    <the-toto />
   </main>
 </template>
 
 <style lang="scss">
-.test {
-  &__toto {
-    color: red;
-  }
-}</style>
+
+</style>

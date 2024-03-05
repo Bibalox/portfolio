@@ -1,0 +1,109 @@
+[data-theme=light],
+.light {
+  --system-solid-100: #FAFAFA;
+  --system-solid-150: #F5F5F5;
+  --system-solid-200: #F2F2F2;
+  --system-solid-250: #EAEAEA;
+  --system-solid-300: #E1E1E1;
+  --system-solid-400: #C1C1C1;
+  --system-solid-500: #8F8F8F;
+  --system-solid-600: #71716F;
+  --system-solid-700: #606060;
+  --system-solid-800: #404040;
+  --system-solid-900: #161616;
+
+  --system-alpha-100: rgba(0,0,0,.02);
+  --system-alpha-200: rgba(0,0,0,.04);
+  --system-alpha-300: rgba(0,0,0,.08);
+  --system-alpha-400: rgba(0,0,0,.12);
+
+  --background-primary: var(--system-solid-200);
+  --background-secondary: var(--system-solid-100);
+
+  --stroke-soft: var(--system-alpha-200);
+  --stroke-medium: var(--system-alpha-300);
+  --stroke-hard: var(--system-alpha-400);
+
+  --cover-soft: rgba(255,255,255,.45);
+  --cover-hard: rgba(255,255,255,.65);
+
+  --accent-solid-100: #FAF1F2;
+  --accent-solid-200: #FBD6DA;
+  --accent-solid-300: #FBB7BF;
+  --accent-solid-400: #FB98A3;
+  --accent-solid-500: #FB7987;
+  --accent-solid-600: #FA5C6E;
+  --accent-solid-700: #E23D50;
+  --accent-solid-800: #CB2034;
+  --accent-solid-900: #B20014;
+
+  --accent-alpha-100: rgba(250,92,110,.06);
+  --accent-alpha-200: rgba(250,92,110,.11);
+  --accent-alpha-300: rgba(250,92,110,.18);
+  --accent-alpha-400: rgba(250,92,110,.24);
+
+  --map-background: #F5F5F5;
+  --map-nature-1: #B7EED1;
+  --map-nature-2: #C9F5DF;
+  --map-road-1: #D2DCE3;
+  --map-road-2: #9EB3CE;
+  --map-road-3: #778EB3;
+  --map-water: #7CD5EA;
+  --map-text-1: #494949;
+  --map-text-2: #FFFFFF;
+}
+
+[data-theme=dark],
+.dark {
+  --system-solid-100: #060606;
+  --system-solid-150: #0E0E0;
+  --system-solid-200: #141414;
+  --system-solid-250: #212121;
+  --system-solid-300: #2C2C2C;
+  --system-solid-400: #434343;
+  --system-solid-500: #616161;
+  --system-solid-600: #8A8A8A;
+  --system-solid-700: #BFBFBF;
+  --system-solid-800: #E9E9E9;
+  --system-solid-900: #FFFFFF;
+
+  --system-alpha-100: rgba(255,255,255,.03);
+  --system-alpha-200: rgba(255,255,255,.07);
+  --system-alpha-300: rgba(255,255,255,.11);
+  --system-alpha-400: rgba(255,255,255,.16);
+
+  --background-primary: var(--system-solid-100);
+  --background-secondary: var(--system-solid-150);
+
+  --stroke-soft: var(--system-alpha-100);
+  --stroke-medium: var(--system-alpha-200);
+  --stroke-hard: var(--system-alpha-300);
+
+  --cover-soft: rgba(0,0,0,.60);
+  --cover-hard: rgba(0,0,0,.75);
+
+  --accent-solid-100: #1E0F10;
+  --accent-solid-200: #481E22;
+  --accent-solid-300: #762E36;
+  --accent-solid-400: #A33E49;
+  --accent-solid-500: #D14E5D;
+  --accent-solid-600: #FA5C6E;
+  --accent-solid-700: #FB7F8D;
+  --accent-solid-800: #FC9DA8;
+  --accent-solid-900: #FDBFC6;
+
+  --accent-alpha-100: rgba(250,92,110,.06);
+  --accent-alpha-200: rgba(250,92,110,.11);
+  --accent-alpha-300: rgba(250,92,110,.18);
+  --accent-alpha-400: rgba(250,92,110,.24);
+
+  --map-background: #1A2636;
+  --map-nature-1: #234C4E;
+  --map-nature-2: #143031;
+  --map-road-1: #3D4E65;
+  --map-road-2: #517097;
+  --map-road-3: #1A2433;
+  --map-water: #07080C;
+  --map-text-1: #FFFFFF;
+  --map-text-2: #171B20;
+}

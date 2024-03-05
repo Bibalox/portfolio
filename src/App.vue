@@ -7,5 +7,7 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style lang="scss">
-
+body {
+  background-color: var(--background-primary);
+}
 </style>
