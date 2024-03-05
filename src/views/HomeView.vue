@@ -3,6 +3,13 @@
 
 <template>
   <main>
-    <span>Hello world!</span>
+    <span class="test__toto">Hello world!</span>
   </main>
 </template>
+
+<style lang="scss">
+.test {
+  &__toto {
+    color: red;
+  }
+}</style>
