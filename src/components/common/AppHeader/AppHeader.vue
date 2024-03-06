@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BoardIcon from '@common/BoardIcon/BoardIcon.vue';
+import AppHeaderLink from './childs/AppHeaderLink.vue'
 </script>
 
 <template>
@@ -7,14 +7,18 @@ import BoardIcon from '@common/BoardIcon/BoardIcon.vue';
     <svg class="appHeader__logo">
       <use href="#logo-full" />
     </svg>
-    <board-icon id="contact-32" class="toto" />
-    <board-icon id="telephone-40" class="toto" />
+    <nav class="appHeader__nav">
+      <app-header-link to="/" />
+      <app-header-link to="/references" />
+      <app-header-link to="/" />
+    </nav>
   </header>
 </template>
 
 <style lang="scss">
 .appHeader {
   align-items: center;
+  background-color: red;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -26,10 +30,5 @@ import BoardIcon from '@common/BoardIcon/BoardIcon.vue';
     height: 32px;
     width: 224px;
   } 
-}
-.toto {
-  --primary-stroke: coral;
-  --secondary-stroke: green;
-  --background: blue;
 }
 </style>

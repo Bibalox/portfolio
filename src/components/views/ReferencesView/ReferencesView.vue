@@ -2,9 +2,8 @@
 </script>
 
 <template>
-  <span>Home</span>
+  <span>Références</span>
 </template>
 
 <style lang="scss">
-
 </style>
