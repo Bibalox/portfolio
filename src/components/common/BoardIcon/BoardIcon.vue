@@ -4,20 +4,22 @@ const props = defineProps<{
 }>()
 
 const size = props.id.split('-').slice(-1)
-console.log(size)
 </script>
 
 <template>
-  <svg :class="['CommonIcon', `CommonIcon--${size.toString()}`]">
+  <svg :class="`BoardIcon BoardIcon--${size.toString()}`">
     <use :href="`#${id}`" />
   </svg>
 </template>
 
 <style lang="scss">
-.CommonIcon {
-  --primary-stroke: red;
-  --secondary-stroke: green;
-  --background: blue;
+.BoardIcon {
+  flex-shrink: 0;
+
+  &--24 {
+    height: 32px;
+    width: 32px;
+  }
 
   &--32 {
     height: 32px;
@@ -25,6 +27,11 @@ console.log(size)
   }
 
   &--40 {
+    height: 40px;
+    width: 40px;
+  }
+
+  &--80 {
     height: 40px;
     width: 40px;
   }

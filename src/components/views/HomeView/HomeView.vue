@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import TheToto from '@/components/TheToto.vue'
+import AppHeader from '@common/AppHeader/AppHeader.vue'
 </script>
 
 <template>
   <main>
-    <the-toto />
+    <app-header />
   </main>
 </template>
 
