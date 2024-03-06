@@ -29,7 +29,7 @@ if (currentTheme === 'system') {
 
 // Insert the icon board into the HTML file
 
-fetch('icons.svg')
+fetch('icon-board.svg')
   .then(response => response.text())
   .then(svg => document.body.insertAdjacentHTML('afterbegin', svg))
 
