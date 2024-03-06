@@ -5,10 +5,11 @@
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@views/*": ["./src/components/views/*"],
+      "@common/*": ["./src/components/common/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   }
 }
