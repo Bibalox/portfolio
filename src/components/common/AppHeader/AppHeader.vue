@@ -69,7 +69,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
     --symbol: var(--accent-solid-600);
 
     height: 32px;
-    width: 224px;
+    width: 228px;
     
     &--compact {
       display: none;
