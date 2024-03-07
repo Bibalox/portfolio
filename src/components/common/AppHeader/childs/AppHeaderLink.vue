@@ -91,6 +91,8 @@ const routes: { [key: string]: Route } = {
     flex: 1;
     flex-direction: column;
     gap: 8px;
+    height: auto;
+    padding: 0;
 
     &__icon {
       --primary-stroke: var(--system-solid-700);

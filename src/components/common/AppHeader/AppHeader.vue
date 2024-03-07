@@ -10,7 +10,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
   <header class="app-header">
     <div class="app-header__background" />
     <div class="app-header__wrapper">
-      <router-link to="/">
+      <router-link to="/" class="app-header__logo-link">
         <svg class="app-header__logo app-header__logo--full">
           <use href="#logo-full" />
         </svg>
@@ -49,7 +49,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
   &__background {
     background-color: var(--background-primary);
     height: 100%;
-    opacity: .9;
+    opacity: .7;
     position: absolute;
     width: 100%;
   }
@@ -113,11 +113,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
     padding: 0 16px;
     top: unset;
 
-    &__logo {
-      display: none;
-    }
-
-    &__theme-switcher {
+    &__logo, &__logo-link, &__theme-switcher {
       display: none;
     }
   }
