@@ -32,8 +32,8 @@ html, body {
 }
 
 .main-content {
-  background-color: coral;
   flex: 1;
+  width: 100%;
 
   &--contained {
     margin: 80px 0 0;

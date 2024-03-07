@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import HomeHero from './childs/HomeHero.vue';
 </script>
 
 <template>
   <main>
-    <span>Home</span>
+    <home-hero />
   </main>
 </template>
 
