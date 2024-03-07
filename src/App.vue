@@ -45,6 +45,6 @@ html, body {
 }
 
 * {
-  transition: background-color .3s, color .3s, border-color .3s;
+  transition: background-color .6s, color .6s, border-color .6s;
 }
 </style>
