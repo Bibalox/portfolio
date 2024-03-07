@@ -5,9 +5,14 @@ import { RouterView } from 'vue-router'
 
 <template>
   <app-header />
-  <main class="main-content">
-    <router-view />
-  </main>
+  <router-view
+    class="main-content main-content"
+    name="FullScreen"
+  />
+  <router-view
+    name="Contained"
+    class="main-content main-content--contained"
+  />
 </template>
 
 <style lang="scss">
@@ -15,7 +20,6 @@ html, body {
   background-color: var(--background-primary);
   height: 100%;
   margin: 0;
-  overflow-y: auto;
   padding: 0;
 }
 
@@ -23,16 +27,21 @@ html, body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-color: green;
-  position: relative;
   min-height: 100%;
   width: 100%;
 }
 
 .main-content {
   background-color: coral;
-  flex-shrink: 0;
-  height: 2500px;
+  flex: 1;
+
+  &--contained {
+    margin: 80px 0 0;
+
+    @media (max-width: 680px) {
+      margin: 0 0 81px;
+    }
+  }
 }
 
 * {

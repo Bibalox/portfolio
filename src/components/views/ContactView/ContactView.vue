@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <span>Contact</span>
+  <main>
+    <span>Contact</span>
+  </main>
 </template>
 
 <style lang="scss">

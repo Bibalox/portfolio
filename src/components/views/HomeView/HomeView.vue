@@ -2,9 +2,10 @@
 </script>
 
 <template>
-  <span>Home</span>
+  <main>
+    <span>Home</span>
+  </main>
 </template>
 
 <style lang="scss">
-
 </style>

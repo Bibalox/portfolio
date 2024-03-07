@@ -39,11 +39,9 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
   backdrop-filter: blur(12px);
   box-sizing: border-box;
   display: flex;
-  height: 80px;
   justify-content: center;
-
   padding: 0 40px;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
@@ -60,6 +58,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
     align-items: center;
     display: flex;
     gap: 40px;
+    height: 80px;
     max-width: 1200px;
     position: relative;
     width: 100%;
@@ -110,6 +109,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
 
   @media (max-width: 680px) {
     bottom: 0;
+    border-top: 1px solid var(--system-solid-250);
     padding: 0 16px;
     top: unset;
 

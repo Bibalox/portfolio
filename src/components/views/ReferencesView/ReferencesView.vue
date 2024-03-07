@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <span>Références</span>
+  <main>
+    <span>Références</span>
+  </main>
 </template>
 
 <style lang="scss">
