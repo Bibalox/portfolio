@@ -8,6 +8,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
 
 <template>
   <header class="app-header">
+    <div class="app-header__background" />
     <div class="app-header__wrapper">
       <router-link to="/">
         <svg class="app-header__logo app-header__logo--full">
@@ -34,21 +35,33 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
 <style lang="scss">
 .app-header {
   align-items: center;
-  background-color: var(--system-alpha-100);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   box-sizing: border-box;
   display: flex;
   height: 80px;
   justify-content: center;
+
   padding: 0 40px;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
+  z-index: 999;
+
+  &__background {
+    background-color: var(--background-primary);
+    height: 100%;
+    opacity: .9;
+    position: absolute;
+    width: 100%;
+  }
 
   &__wrapper {
     align-items: center;
     display: flex;
     gap: 40px;
     max-width: 1200px;
+    position: relative;
     width: 100%;
   }
 
@@ -109,6 +122,4 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
     }
   }
 }
-
-// TODO: Background blur
 </style>

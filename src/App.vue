@@ -5,16 +5,34 @@ import { RouterView } from 'vue-router'
 
 <template>
   <app-header />
-  <main>
+  <main class="main-content">
     <router-view />
   </main>
 </template>
 
 <style lang="scss">
-body {
+html, body {
   background-color: var(--background-primary);
+  height: 100%;
   margin: 0;
-  min-height: 100vh;
+  overflow-y: auto;
+  padding: 0;
+}
+
+#app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+.main-content {
+  background-color: coral;
+  flex-shrink: 0;
+  height: 2500px;
 }
 
 * {
