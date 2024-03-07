@@ -1,5 +1,4 @@
-[data-theme=light],
-.light {
+[data-theme=light] {
   --system-solid-100: #FAFAFA;
   --system-solid-150: #F5F5F5;
   --system-solid-200: #F2F2F2;
@@ -53,8 +52,7 @@
   --map-text-2: #FFFFFF;
 }
 
-[data-theme=dark],
-.dark {
+[data-theme=dark] {
   --system-solid-100: #060606;
   --system-solid-150: #0E0E0;
   --system-solid-200: #141414;
