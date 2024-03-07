@@ -16,4 +16,8 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+
+* {
+  transition: background-color .3s, color .3s, border-color .3s;
+}
 </style>
