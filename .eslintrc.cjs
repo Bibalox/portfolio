@@ -41,6 +41,10 @@ module.exports = {
         ]
       }
     ],
+    'no-irregular-whitespace': [
+      'off'
+    ]
+    ,
     'no-new': 0,
     'quotes': [
       'error',
