@@ -12,10 +12,8 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    '@typescript-eslint/no-empty-interface': 'off',
-    'no-unused-vars': 'off',
+    '@typescript-eslint/allowImportingTsExtensions': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'off',
     'arrow-parens': [
       'error',
       'as-needed'
@@ -61,7 +59,8 @@ module.exports = {
         'multiline': { 'max': 1 }
       }
     ],
-    'vue/html-self-closing': 0
+    'vue/html-self-closing': 0,
+    'vue/no-v-html': 'off'
   }
 }
 

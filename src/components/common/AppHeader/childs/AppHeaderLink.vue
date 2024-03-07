@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n';
+
 import BoardIcon from '@common/BoardIcon/BoardIcon.vue'
-    
+
+const i18n = useI18n()
+
 defineProps<{ id: string }>()
 
 interface Route {
@@ -14,22 +18,22 @@ const routes: { [key: string]: Route } = {
   home: {
     to: '/',
     icon: 'logo-32',
-    label: 'Accueil'
+    label: i18n.t('common.appHeader.home')
   },
   references: {
     to: '/references',
     icon: 'references-32',
-    label: 'Références'
+    label: i18n.t('common.appHeader.references')
   },
   skills: {
     to: '/skills',
     icon: 'skills-32',
-    label: 'Compétences'
+    label: i18n.t('common.appHeader.skills')
   },
   contact: {
     to: '/contact',
     icon: 'contact-32',
-    label: 'Contact'
+    label: i18n.t('common.appHeader.contact')
   }
 }
 </script>
