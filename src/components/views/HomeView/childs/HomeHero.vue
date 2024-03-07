@@ -6,9 +6,12 @@
     <div class="home-hero__wrapper">
       <div class="home-hero__cover home-hero__cover--color" />
       <div class="home-hero__cover home-hero__cover--blur" />
-      <p class="home-hero__paragraph paragraph-lg" v-text="$t('views.home.hero.paragraph1')" />
-      <p class="home-hero__paragraph paragraph-lg" v-html="$t('views.home.hero.paragraph2')" />
-      <p class="home-hero__paragraph paragraph-lg" v-text="$t('views.home.hero.paragraph3')" />
+      <p
+        v-for="(paragraph, index) in $tm('views.home.hero.paragraphs')"
+        :key="index"
+        class="home-hero__paragraph paragraph-lg"
+        v-html="paragraph"
+      />
     </div>
   </div>
 </template>
