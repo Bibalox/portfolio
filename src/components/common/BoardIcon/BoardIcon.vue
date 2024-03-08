@@ -32,8 +32,8 @@ const size = props.id.split('-').slice(-1)
   }
 
   &--80 {
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
   }
 }
 </style>
