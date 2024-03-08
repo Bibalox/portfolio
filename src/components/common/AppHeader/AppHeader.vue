@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import AppHeaderLink from './childs/AppHeaderLink.vue'
-import ThemeSwitcher from '@common/ThemeSwitcher/ThemeSwitcher.vue';
+import ThemeSwitcher from '@common/ThemeSwitcher/ThemeSwitcher.vue'
 
 const routes = ref(['home', 'references', 'skills', 'contact'])
 </script>
