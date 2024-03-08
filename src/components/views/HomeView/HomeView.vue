@@ -37,14 +37,18 @@ import HomeHero from './childs/HomeHero.vue';
 
   &__bio {
     column-count: 2;
-    gap: 96px;
     column-width: 360px;
+    gap: 96px;
   }
 
   &__paragraph {
     color: var(--system-solid-700);
     display: inline-block;
     margin: 40px 0 0;
+
+    & strong {
+      color: var(--system-solid-800);
+    }
   }
 
   @media (max-width: 960px) {
