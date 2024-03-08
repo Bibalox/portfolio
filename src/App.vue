@@ -6,17 +6,10 @@ import AppFooter from '@common/AppFooter/AppFooter.vue'
 
 <template>
   <app-header />
-  <router-view v-slot="{ Component }">
-    <main
-      :class="[
-        'main-content',
-        { 'main-content--contained' : $route.meta.layout === 'contained' }
-      ]"
-    >
-      <component :is="Component" />
-    </main>
-    <app-footer v-if="$route.meta.layout === 'contained'" />
-  </router-view>
+  <main :class="['app-main', { 'app-main--contained' : $route.meta.layout === 'contained' }]">
+    <router-view />
+  </main>
+  <app-footer v-if="$route.meta.layout === 'contained'" />
 </template>
 
 <style lang="scss">
@@ -35,7 +28,7 @@ html, body {
   width: 100%;
 }
 
-.main-content {
+.app-main {
   align-items: center;
   display: flex;
   flex: 1;

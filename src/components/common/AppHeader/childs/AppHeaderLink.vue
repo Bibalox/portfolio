@@ -1,54 +1,18 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import { useI18n } from 'vue-i18n';
-
 import BoardIcon from '@common/BoardIcon/BoardIcon.vue'
 
-const i18n = useI18n()
-
 defineProps<{ id: string }>()
-
-interface Route {
-  to: string
-  icon: string
-  label: string
-}
-
-const routes: { [key: string]: Route } = {
-  home: {
-    to: '/',
-    icon: 'logo-32',
-    label: i18n.t('common.appHeader.home')
-  },
-  references: {
-    to: '/references',
-    icon: 'references-32',
-    label: i18n.t('common.appHeader.references')
-  },
-  skills: {
-    to: '/skills',
-    icon: 'skills-32',
-    label: i18n.t('common.appHeader.skills')
-  },
-  contact: {
-    to: '/contact',
-    icon: 'contact-32',
-    label: i18n.t('common.appHeader.contact')
-  }
-}
 </script>
 
 <template>
   <router-link
-    :to="routes[id].to"
-    :class="[
-      'app-header-link',
-      { 'app-header-link--home' : routes[id].to === '/'}
-    ]"
+    :to="{ name: id }"
+    :class="['app-header-link', { 'app-header-link--home' : id === 'home'}]"
   >
-    <board-icon :id="routes[id].icon" class="app-header-link__icon" />
-    <span class="app-header-link__label app-header-link__label--lg label-md" v-text="routes[id].label" />
-    <span class="app-header-link__label app-header-link__label--sm label-xs" v-text="routes[id].label" />
+    <board-icon :id="`${id}-32`" class="app-header-link__icon" />
+    <span class="app-header-link__label app-header-link__label--lg label-md" v-text="$t(`common.appHeader.${id}`)" />
+    <span class="app-header-link__label app-header-link__label--sm label-xs" v-text="$t(`common.appHeader.${id}`)" />
   </router-link>
 </template>
 
