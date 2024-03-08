@@ -32,7 +32,10 @@ html, body {
 }
 
 .main-content {
+  align-items: center;
+  display: flex;
   flex: 1;
+  flex-direction: column;
   width: 100%;
 
   &--contained {
