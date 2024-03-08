@@ -7,7 +7,7 @@
       <div class="home-hero__cover home-hero__cover--color" />
       <div class="home-hero__cover home-hero__cover--blur" />
       <p
-        v-for="(paragraph, index) in $tm('views.home.hero.paragraphs')"
+        v-for="(paragraph, index) in $tm('home.hero.paragraphs')"
         :key="index"
         class="home-hero__paragraph paragraph-lg"
         v-html="paragraph"
@@ -18,7 +18,9 @@
 
 <style lang="scss">
 .home-hero {
-  margin: 0 24px;
+  box-sizing: border-box;
+  padding: 0 24px;
+  width: 100%;
 
   $radius: 20px;
 
@@ -47,6 +49,7 @@
     width: 100%;
 
     & strong {
+      color: var(--system-solid-800); // Fix to smooth the color transition when switching theme
       font-weight: 700;
     }
   }
@@ -71,7 +74,7 @@
   }
   
   @media (max-width: 680px) {
-    margin: 16px;
+    padding: 16px 16px 0;
 
     &__wrapper {
       aspect-ratio: unset;
