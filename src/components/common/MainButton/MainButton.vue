@@ -17,12 +17,20 @@ defineProps<{ label: string }>()
   box-sizing: border-box;
   color: var(--accent-solid-600);
   display: flex;
-  justify-content: center;
   height: 36px;
+  justify-content: center;
   padding: 10px;
+  transition: background-color .2s, transform .2s;
 
   &__label {
     font-weight: 700;
+  }
+
+  &:hover {
+    background-color: var(--accent-solid-600);
+    color: var(--system-solid-100);
+    cursor: pointer;
+    transform: translateY(-2px);
   }
 }
 </style>
