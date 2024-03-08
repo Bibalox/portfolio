@@ -10,30 +10,26 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      components: {
-        Contained: HomeView
-      }
+      component: HomeView,
+      meta: { layout: 'contained' }
     },
     {
       path: '/references',
       name: 'references',
-      components: {
-        Contained: ReferencesView
-      }
+      component: ReferencesView,
+      meta: { layout: 'contained' }
     },
     {
       path: '/skills',
       name: 'skills',
-      components: {
-        Contained: SkillsView
-      }
+      component: SkillsView,
+      meta: { layout: 'contained' }
     },
     {
       path: '/contact',
       name: 'contact',
-      components: {
-        FullScreen: ContactView
-      }
+      component: ContactView,
+      meta: { layout: 'fullscreen' }
     }
   ]
 })

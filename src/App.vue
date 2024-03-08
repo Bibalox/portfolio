@@ -1,18 +1,22 @@
 <script setup lang="ts">
-import AppHeader from '@common/AppHeader/AppHeader.vue'
 import { RouterView } from 'vue-router'
+import AppHeader from '@common/AppHeader/AppHeader.vue'
+import AppFooter from '@common/AppFooter/AppFooter.vue'
 </script>
 
 <template>
   <app-header />
-  <router-view
-    class="main-content main-content"
-    name="FullScreen"
-  />
-  <router-view
-    name="Contained"
-    class="main-content main-content--contained"
-  />
+  <router-view v-slot="{ Component }">
+    <main
+      :class="[
+        'main-content',
+        { 'main-content--contained' : $route.meta.layout === 'contained' }
+      ]"
+    >
+      <component :is="Component" />
+    </main>
+    <app-footer v-if="$route.meta.layout === 'contained'" />
+  </router-view>
 </template>
 
 <style lang="scss">

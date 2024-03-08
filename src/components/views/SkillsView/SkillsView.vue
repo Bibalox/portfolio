@@ -2,9 +2,7 @@
 </script>
 
 <template>
-  <main>
-    <span>Compétences</span>
-  </main>
+  <span>Compétences</span>
 </template>
 
 <style lang="scss">

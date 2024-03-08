@@ -6,40 +6,38 @@ const links = ['references', 'skills', 'contact']
 </script>
 
 <template>
-  <main class="home-view">
-    <home-hero />
-    <section class="home-view__section">
-      <h2 class="home-view__title title-lg" v-text="$t('home.bio.title')" />
-      <div class="home-view__bio">
-        <p
-          v-for="(paragraph, index) in $tm('home.bio.paragraphs')"
-          :key="index"
-          class="home-view__paragraph paragraph-md"
-          v-html="paragraph"
-        />
-      </div>
-      <h2 class="home-view__title title-lg" v-text="$t('home.links.title')" />
-      <div class="home-view__links">
-        <home-link
-          v-for="(link, index) in links"
-          :key="index"
-          :icon="`${link}-80`"
-          :title="$t(`home.links.${link}.title`)"
-          :description="$t(`home.links.${link}.description`)"
-        />
-      </div>
-    </section>
-  </main>
+  <home-hero />
+  <section class="home-section">
+    <h2 class="home-section__title title-lg" v-text="$t('home.bio.title')" />
+    <div class="home-section__bio">
+      <p
+        v-for="(paragraph, index) in $tm('home.bio.paragraphs')"
+        :key="index"
+        class="home-section__paragraph paragraph-md"
+        v-html="paragraph"
+      />
+    </div>
+  </section>
+  <section class="home-section">
+    <h2 class="home-section__title title-lg" v-text="$t('home.links.title')" />
+    <div class="home-section__links">
+      <home-link
+        v-for="(link, index) in links"
+        :key="index"
+        :icon="`${link}-80`"
+        :title="$t(`home.links.${link}.title`)"
+        :description="$t(`home.links.${link}.description`)"
+      />
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
-.home-view {
-  &__section {
-    box-sizing: border-box;
-    max-width: 1200px;
-    padding: 0 40px;
-    width: 100%;
-  }
+.home-section {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 0 40px;
+  width: 100%;
 
   &__title {
     color: var(--system-solid-800);
@@ -71,10 +69,8 @@ const links = ['references', 'skills', 'contact']
   }
 
   @media (max-width: 960px) {
-    &__section {
-      padding: 0;
-      width: 600px;
-    }
+    padding: 0;
+    width: 600px;
 
     &__title {
       margin: 64px 0 0;
@@ -87,10 +83,8 @@ const links = ['references', 'skills', 'contact']
   }
 
   @media (max-width: 680px) {
-    &__section {
-      padding: 0 32px;
-      width: 100%;
-    }
+    padding: 0 32px;
+    width: 100%;
 
     &__title {
       margin: 48px 0 0;
