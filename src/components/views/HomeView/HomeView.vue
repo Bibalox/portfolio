@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import HomeHero from './childs/HomeHero.vue'
 import HomeLink from './childs/HomeLink.vue'
+
+const links = ['references', 'skills', 'contact']
 </script>
 
 <template>
@@ -18,9 +20,13 @@ import HomeLink from './childs/HomeLink.vue'
       </div>
       <h2 class="home-view__title title-lg" v-text="$t('home.links.title')" />
       <div class="home-view__links">
-        <home-link />
-        <home-link />
-        <home-link />
+        <home-link
+          v-for="(link, index) in links"
+          :key="index"
+          :icon="`${link}-80`"
+          :title="$t(`home.links.${link}.title`)"
+          :description="$t(`home.links.${link}.description`)"
+        />
       </div>
     </section>
   </main>
@@ -58,8 +64,9 @@ import HomeLink from './childs/HomeLink.vue'
   }
 
   &__links {
-    display: flex;
+    display: grid;
     gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 40px;
   }
 
@@ -71,6 +78,11 @@ import HomeLink from './childs/HomeLink.vue'
 
     &__title {
       margin: 64px 0 0;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
     }
   }
 

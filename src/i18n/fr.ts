@@ -25,7 +25,20 @@ export const fr = {
       ]
     },
     links: {
-      title: 'Alors, par où on commence ?'
+      title: 'Alors, par où on commence ?',
+      buttonLabel: 'C\'est parti !',
+      references: {
+        title: 'Mes références',
+        description: 'Découvrez mes travaux majeurs de ces dernières années.'
+      },
+      skills: {
+        title: 'Mes compétences',
+        description: 'Apprenez-en plus sur mes capacités et mes connaissances.'
+      },
+      contact: {
+        title: 'Mes coordonnées',
+        description: 'Contactez-moi pour en savoir encore plus à mon sujet !'
+      }
     }
   }
 }
