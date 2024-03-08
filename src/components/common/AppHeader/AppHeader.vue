@@ -49,7 +49,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
   &__background {
     background-color: var(--background-primary);
     height: 100%;
-    opacity: .7;
+    opacity: .6;
     position: absolute;
     width: 100%;
   }
