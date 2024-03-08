@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import HomeHero from './childs/HomeHero.vue';
+import HomeHero from './childs/HomeHero.vue'
+import HomeLink from './childs/HomeLink.vue'
 </script>
 
 <template>
@@ -16,6 +17,11 @@ import HomeHero from './childs/HomeHero.vue';
         />
       </div>
       <h2 class="home-view__title title-lg" v-text="$t('home.links.title')" />
+      <div class="home-view__links">
+        <home-link />
+        <home-link />
+        <home-link />
+      </div>
     </section>
   </main>
 </template>
@@ -49,6 +55,12 @@ import HomeHero from './childs/HomeHero.vue';
     & strong {
       color: var(--system-solid-800);
     }
+  }
+
+  &__links {
+    display: flex;
+    gap: 24px;
+    margin-top: 40px;
   }
 
   @media (max-width: 960px) {
