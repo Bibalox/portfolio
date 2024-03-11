@@ -27,28 +27,27 @@ watch(route, () => {
 
 <style lang="scss">
 html, body {
-  background-color: var(--background-primary);
-  display: flex;
-  flex: 1;
-  flex-direction: column;
   margin: 0;
-  min-height: 100%;
   padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-primary);
 }
 
 .app {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
-  flex: 1;
   flex-direction: column;
   min-height: 100%;
-  width: 100%;
   
   &--default-layout {
-    margin: 80px 0 0;
+    padding: 80px 0 0;
 
     @media (max-width: 680px) {
-      margin: 0 0 81px;
+      padding: 0 0 81px;
     }
   }
 }
@@ -58,6 +57,6 @@ html, body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  width: 100%; 
+  width: 100%;
 }
 </style>
