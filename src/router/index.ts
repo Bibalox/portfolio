@@ -11,19 +11,19 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: { layout: 'contained' }
+      meta: { layout: 'default' }
     },
     {
       path: '/references',
       name: 'references',
       component: ReferencesView,
-      meta: { layout: 'contained' }
+      meta: { layout: 'default' }
     },
     {
       path: '/skills',
       name: 'skills',
       component: SkillsView,
-      meta: { layout: 'contained' }
+      meta: { layout: 'default' }
     },
     {
       path: '/contact',
