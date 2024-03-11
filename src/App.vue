@@ -29,6 +29,7 @@ watch(route, () => {
 html, body {
   background-color: var(--background-primary);
   display: flex;
+  flex: 1;
   flex-direction: column;
   margin: 0;
   min-height: 100%;
@@ -38,10 +39,11 @@ html, body {
 .app {
   align-items: center;
   display: flex;
+  flex: 1;
   flex-direction: column;
   min-height: 100%;
   width: 100%;
-
+  
   &--default-layout {
     margin: 80px 0 0;
 
