@@ -9,6 +9,7 @@ defineProps<{ id: string }>()
   <router-link
     :to="{ name: id }"
     :class="['app-header-link', { 'app-header-link--home' : id === 'home'}]"
+    active-class="app-header-link--active"
   >
     <board-icon :id="`${id}-32`" class="app-header-link__icon" />
     <span class="app-header-link__label app-header-link__label--lg label-md" v-text="$t(`common.appHeader.${id}`)" />
@@ -46,11 +47,11 @@ defineProps<{ id: string }>()
     display: none;
   }
 
-  &.router-link-active, &:hover {
+  &--active, &:hover {
     background-color: var(--accent-alpha-200);
     border-color: var(--accent-alpha-100);
 
-    & .app-header-link__label {
+    .app-header-link__label {
       color: var(--accent-solid-600);
     }
   }
@@ -85,7 +86,7 @@ defineProps<{ id: string }>()
       display: flex;
     }
 
-    &.router-link-active, &:hover {
+    &--active, &:hover {
       background-color: transparent;
       border-color: transparent;
 
@@ -95,7 +96,7 @@ defineProps<{ id: string }>()
         --background: var(--accent-alpha-200);
       }
 
-      & .app-header-link__label {
+      .app-header-link__label {
         color: var(--accent-solid-600);
       }
     }

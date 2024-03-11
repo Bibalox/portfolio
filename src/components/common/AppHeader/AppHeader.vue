@@ -27,7 +27,9 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
         />
       </nav>
 
-      <theme-switcher class="app-header__theme-switcher" />
+      <div class="app-header__theme-switcher-wrapper">
+        <theme-switcher />
+      </div>
     </div>
   </header>
 </template>
@@ -113,7 +115,7 @@ const routes = ref(['home', 'references', 'skills', 'contact'])
     padding: 0 16px;
     top: unset;
 
-    &__logo, &__logo-link, &__theme-switcher {
+    &__logo, &__logo-link, &__theme-switcher-wrapper {
       display: none;
     }
   }
