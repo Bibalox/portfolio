@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import BoardIcon from '@common/BoardIcon/BoardIcon.vue'
 
-defineProps<{
+interface Props {
   size: 'sm' | 'lg'
   icon: string
   label: string
   to: string
-}>()
+  weight?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  weight: '1'
+})
 </script>
 
 <template>
-  <a :class="`key-point key-point--${size}`" :href="to">
+  <a :href="to" :class="`key-point key-point--${size} key-point--weight-${weight}`">
     <board-icon :id="icon" />
     <span class="key-point__label label-sm" v-text="label" />
   </a>
@@ -33,7 +38,9 @@ defineProps<{
   &__label {
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
     white-space: nowrap;
+    width: 100%;
   }
 
   &--sm {
@@ -43,6 +50,18 @@ defineProps<{
 
   &--lg {
     gap: 16px;
+  }
+
+  &--weight-1 {
+    flex: 1;
+  }
+
+  &--weight-2 {
+    flex: 2;
+  }
+
+  &--weight-3 {
+    flex: 3;
   }
 
   &:hover {

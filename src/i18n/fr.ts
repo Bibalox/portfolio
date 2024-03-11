@@ -1,5 +1,8 @@
 export const fr = {
   common: {
+    appFooter: {
+      message: 'Conçu et développé avec amour par mes soins'
+    },
     appHeader: {
       home: 'Accueil',
       references: 'Références',
