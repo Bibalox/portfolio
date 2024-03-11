@@ -1,17 +1,19 @@
 <script setup lang="ts">
-defineProps<{ label: string }>()
+defineProps<{
+  label: string
+  to: string
+}>()
 </script>
 
 <template>
-  <button class="main-button">
+  <router-link :to="to" class="main-button">
     <span class="main-button__label label-md" v-text="label" />
-  </button>
+  </router-link>
 </template>
 
 <style lang="scss">
 .main-button {
   align-items: center;
-  background-color: transparent;
   border: 2px solid var(--accent-solid-600);
   border-radius: 9px;
   box-sizing: border-box;
@@ -20,6 +22,7 @@ defineProps<{ label: string }>()
   height: 36px;
   justify-content: center;
   padding: 10px;
+  text-decoration: none;
   transition: background-color .2s, transform .2s;
 
   &__label {
@@ -29,7 +32,6 @@ defineProps<{ label: string }>()
   &:hover {
     background-color: var(--accent-solid-600);
     color: var(--system-solid-100);
-    cursor: pointer;
     transform: translateY(-2px);
   }
 }

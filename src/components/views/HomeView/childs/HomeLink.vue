@@ -6,6 +6,7 @@ defineProps<{
   icon: string,
   title: string,
   description: string
+  to: string
 }>()
 </script>
 
@@ -16,7 +17,7 @@ defineProps<{
       <h3 class="home-link__title title-sm" v-text="title" />
       <p class="home-link__description paragraph-xs" v-text="description" />
     </div>
-    <main-button :label="$t('home.links.buttonLabel')" />
+    <main-button :to="to" :label="$t('home.links.buttonLabel')" />
   </div>
 </template>
 

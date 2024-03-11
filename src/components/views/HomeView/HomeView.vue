@@ -27,6 +27,7 @@ const links = ['references', 'skills', 'contact']
         :icon="`${link}-80`"
         :title="$t(`home.links.${link}.title`)"
         :description="$t(`home.links.${link}.description`)"
+        :to="link"
       />
     </div>
   </section>
