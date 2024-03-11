@@ -43,5 +43,14 @@ export const fr = {
         description: 'Contactez-moi pour en savoir encore plus à mon sujet !'
       }
     }
+  },
+  references: {
+    buttonLabel: 'Lire la suite',
+    'bee-buzziness': {
+      title: 'Bee Buzziness',
+      subtitle: 'Design UI/UX',
+      summary: 'Afin d\'assurer sa transition vers le SaaS, Bee Buzziness m\'a confié la mission d\'intégrer l\'utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J\'ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.',
+      year: '2017'
+    }
   }
 }

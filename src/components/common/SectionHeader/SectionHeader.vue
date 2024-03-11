@@ -33,6 +33,7 @@ defineProps<{
 .section-header {
   display: flex;
   gap: 12px;
+  width: 100%;
 
   &__decoration {
     background-color: var(--accent-solid-600);
@@ -43,6 +44,12 @@ defineProps<{
     width: 3px;
   }
 
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
   &__title {
     color: var(--system-solid-800);
     margin: 0;
@@ -51,10 +58,6 @@ defineProps<{
   &__subtitle {
     color: var(--system-solid-500);
     margin: 0 0 2px;
-  }
-
-  &--md &__texts {
-    overflow: hidden;
   }
 
   &--md &__title, &--md &__subtitle {
