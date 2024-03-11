@@ -27,7 +27,7 @@
   &__wrapper {
     align-items: center;
     aspect-ratio: 16/9;
-    background: center / cover no-repeat url("/images/hero-background.jpeg");
+    background: center / cover no-repeat url("/backgrounds/hero.jpeg");
     border-radius: $radius;
     box-sizing: border-box;
     display: flex;
