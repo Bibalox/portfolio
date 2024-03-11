@@ -58,8 +58,4 @@ html, body {
   flex-direction: column;
   width: 100%; 
 }
-
-* {
-  transition: background-color .6s, color .6s, border-color .6s;
-}
 </style>
