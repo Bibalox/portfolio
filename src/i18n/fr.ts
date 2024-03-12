@@ -45,22 +45,31 @@ export const fr = {
     }
   },
   references: {
-    buttonLabel: 'Lire la suite',
+    buttonLabels: {
+      next: 'Lire la suite',
+      back: 'retour'
+    },
     values: {
       'bee-buzziness': {
         title: 'Bee Buzziness',
         subtitle: 'Design UI/UX',
-        summary: 'Afin d\'assurer sa transition vers le SaaS, Bee Buzziness m\'a confié la mission d\'intégrer l\'utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J\'ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.'
+        paragraphs: [
+          'Afin d\'assurer sa transition vers le SaaS, Bee Buzziness m\'a confié la mission d\'intégrer l\'utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J\'ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.'
+        ]
       },
       'france-bureau': {
         title: 'France Bureau',
         subtitle: 'Design UI',
-        summary: 'Au delà de mes tâches quotidiennes chez France Bureau, il m’a été confié la refonte complète du site vitrine afin de le moderniser sur les aspects visuels et technique. Une des composantes essentielles du projet a été le maintien du référencement naturel, qui s’est principalement traduit par la conservation des contenus et le maintien des pages existantes.'
+        paragraphs: [
+          'Au delà de mes tâches quotidiennes chez France Bureau, il m’a été confié la refonte complète du site vitrine afin de le moderniser sur les aspects visuels et technique. Une des composantes essentielles du projet a été le maintien du référencement naturel, qui s’est principalement traduit par la conservation des contenus et le maintien des pages existantes.'
+        ]
       },
       'radio-france': {
         title: 'Radio France',
         subtitle: 'Signalétique',
-        summary: 'La Maison de la Radio est un des joyaux culturels et architecturaux de la ville de Paris. Entre ses salles de concert, ses studios d’enregistrements et son agora, elle est pour Radio France bien plus qu’un siège social. La résidence à l’année de l’Orchestre National de France vient amplifier d’autant plus l’aura de ce haut lieu de la culture française.'
+        paragraphs: [
+          'La Maison de la Radio est un des joyaux culturels et architecturaux de la ville de Paris. Entre ses salles de concert, ses studios d’enregistrements et son agora, elle est pour Radio France bien plus qu’un siège social. La résidence à l’année de l’Orchestre National de France vient amplifier d’autant plus l’aura de ce haut lieu de la culture française.'
+        ]
       }
     }
   }

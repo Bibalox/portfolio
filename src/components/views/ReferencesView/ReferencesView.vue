@@ -33,8 +33,8 @@ const getJunctionType = (index: number, size: number) => {
               :title="$t(`references.values.${reference.id}.title`)"
               :subtitle="$t(`references.values.${reference.id}.subtitle`)"
             />
-            <p class="reference-links__summary paragraph-sm" v-text="$t(`references.values.${reference.id}.summary`)" />
-            <main-button :label="$t('references.buttonLabel')" :to="`/references/${reference.id}`" />
+            <p class="reference-links__summary paragraph-sm" v-text="$t(`references.values.${reference.id}.paragraphs[0]`)" />
+            <main-button :label="$t('references.buttonLabels.next')" :to="`/references/${reference.id}`" />
           </div>
         </div>
       </div>
