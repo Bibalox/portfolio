@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
-  id: string
-}>()
+const props = defineProps<{ id: string }>()
 
 const size = props.id.split('-').slice(-1)
 </script>

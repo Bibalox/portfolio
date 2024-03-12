@@ -9,9 +9,7 @@ interface Props {
   weight?: string
 }
 
-withDefaults(defineProps<Props>(), {
-  weight: '1'
-})
+withDefaults(defineProps<Props>(), { weight: '1' })
 </script>
 
 <template>
