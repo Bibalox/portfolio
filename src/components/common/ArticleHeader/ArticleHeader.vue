@@ -7,12 +7,12 @@ defineProps<{
 </script>
 
 <template>
-  <header :class="`section-header section-header--${size}`">
-    <hr class="section-header__decoration" />
-    <div class="section-header__texts">
+  <header :class="`article-header article-header--${size}`">
+    <hr class="article-header__decoration" />
+    <div class="article-header__texts">
       <h2
         :class="[
-          'section-header__title',
+          'article-header__title',
           size === 'lg' ? 'title-md' : 'label-lg'
         ]"
         v-text="title"
@@ -20,7 +20,7 @@ defineProps<{
       <span
         v-if="size !== 'sm'"
         :class="[
-          'section-header__subtitle',
+          'article-header__subtitle',
           size === 'lg' ? 'label-lg' : 'label-md'
         ]"
         v-text="subtitle"
@@ -30,7 +30,7 @@ defineProps<{
 </template>
 
 <style lang="scss">
-.section-header {
+.article-header {
   display: flex;
   gap: 12px;
   width: 100%;

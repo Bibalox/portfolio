@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import SectionHeader from '@common/SectionHeader/SectionHeader.vue'
+import ArticleHeader from '@common/ArticleHeader/ArticleHeader.vue'
 import MainButton from '@common/MainButton/MainButton.vue'
 
-const references = ['bee-buzziness']
+const references = ['bee-buzziness', 'france-bureau', 'radio-france']
 </script>
 
 <template>
-  <section
+  <article
     v-for="(reference, index) in references"
     :key="index"
     class="reference-link"
@@ -14,23 +14,23 @@ const references = ['bee-buzziness']
     <div class="reference-link__card">
       <img class="reference-link__thumbnail" :src="`/references/${reference}/thumbnail.jpg`" />
       <div class="reference-link__details">
-        <section-header
+        <article-header
           size="md"
-          :title="$t(`references.${reference}.title`)"
-          :subtitle="$t(`references.${reference}.subtitle`)"
+          :title="$t(`references.values.${reference}.title`)"
+          :subtitle="$t(`references.values.${reference}.subtitle`)"
         />
-        <p class="reference-link__summary paragraph-sm" v-text="$t('references.bee-buzziness.summary')" />
-        <main-button :label="$t('references.buttonLabel')" to="/" />
+        <p class="reference-link__summary paragraph-sm" v-text="$t(`references.values.${reference}.summary`)" />
+        <main-button :label="$t('references.buttonLabel')" :to="`/references/${reference}`" />
       </div>
     </div>
-  </section>
+  </article>
 </template>
 
 <style lang="scss">
 .reference-link {
   box-sizing: border-box;
   max-width: 1200px;
-  padding: 16px 40px 0;
+  padding: 0 40px 0;
 
   &__card {
     background-color: var(--background-secondary);
@@ -88,6 +88,8 @@ const references = ['bee-buzziness']
   }
 
   @media (max-width: 680px) {
+    padding: 0 16px;
+
     &__details {
       gap: 16px;
       padding: 24px 16px 20px;
