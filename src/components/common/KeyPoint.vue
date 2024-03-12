@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BoardIcon from '@common/BoardIcon/BoardIcon.vue'
+import BoardIcon from '@common/BoardIcon.vue'
 
 interface Props {
   size: 'sm' | 'lg'

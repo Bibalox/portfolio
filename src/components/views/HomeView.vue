@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HomeHero from './childs/HomeHero.vue'
-import HomeLink from './childs/HomeLink.vue'
+import HomeHero from './childs/Home/HomeHero.vue'
+import HomeLink from './childs/Home/HomeLink.vue'
 
 const links = ['references', 'skills', 'contact']
 </script>

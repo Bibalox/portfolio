@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import KeyPoint from '@common/KeyPoint/KeyPoint.vue'
+import KeyPoint from '@common/KeyPoint.vue'
 import { useI18n } from 'vue-i18n';
 
 const i18n = useI18n()

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ArticleHeader from '@common/ArticleHeader/ArticleHeader.vue'
-import MainButton from '@common/MainButton/MainButton.vue'
-import ReferencesTimeline from './childs/ReferencesTimeline.vue'
+import ArticleHeader from '@common/ArticleHeader.vue'
+import MainButton from '@common/MainButton.vue'
+import ReferencesTimeline from './childs/References/ReferencesTimeline.vue'
 
 const references = [{
   id: 'bee-buzziness',

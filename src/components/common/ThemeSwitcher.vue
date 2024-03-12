@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { getUserTheme, setTheme } from '@utils/themes'
-import ThemeSwitcherButton from './childs/ThemeSwitcherButton.vue'
+import ThemeSwitcherButton from './childs/ThemeSwitcher/ThemeSwitcherButton.vue'
 
 const currentTheme = ref(getUserTheme())
 

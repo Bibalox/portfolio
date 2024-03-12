@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import BoardIcon from '@common/BoardIcon/BoardIcon.vue'
+import BoardIcon from '@common/BoardIcon.vue'
 
 defineProps<{ id: string }>()
 </script>

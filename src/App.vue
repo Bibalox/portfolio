@@ -2,8 +2,8 @@
 import { watch } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 
-import AppHeader from '@common/AppHeader/AppHeader.vue'
-import AppFooter from '@common/AppFooter/AppFooter.vue'
+import AppHeader from '@common/AppHeader.vue'
+import AppFooter from '@common/AppFooter.vue'
 
 const route = useRoute()
 const app = document.querySelector('#app')

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BoardIcon from '@common/BoardIcon/BoardIcon.vue'
-import MainButton from '@common/MainButton/MainButton.vue'
+import BoardIcon from '@common/BoardIcon.vue'
+import MainButton from '@common/MainButton.vue'
 
 defineProps<{
   icon: string,

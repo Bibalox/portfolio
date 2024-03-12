@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppHeaderLink from './childs/AppHeaderLink.vue'
-import ThemeSwitcher from '@common/ThemeSwitcher/ThemeSwitcher.vue'
+import AppHeaderLink from './childs/AppHeader/AppHeaderLink.vue'
+import ThemeSwitcher from '@common/ThemeSwitcher.vue'
 
 const routes = ['home', 'references', 'skills', 'contact']
 </script>

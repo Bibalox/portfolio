@@ -1,8 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@views/HomeView/HomeView.vue'
-import ReferencesView from '@views/ReferencesView/ReferencesView.vue'
-import SkillsView from '@views/SkillsView/SkillsView.vue'
-import ContactView from '@views/ContactView/ContactView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,25 +6,30 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: () => import('@views/HomeView.vue'),
       meta: { layout: 'default' }
     },
     {
       path: '/references',
       name: 'references',
-      component: ReferencesView,
+      component: () => import('@views/ReferencesView.vue'),
+      meta: { layout: 'default' }
+    },
+    {
+      path: '/references/:referenceId',
+      component: () => import('@views/ReferenceView.vue'),
       meta: { layout: 'default' }
     },
     {
       path: '/skills',
       name: 'skills',
-      component: SkillsView,
+      component: () => import('@views/SkillsView.vue'),
       meta: { layout: 'default' }
     },
     {
       path: '/contact',
       name: 'contact',
-      component: ContactView,
+      component: () => import('@views/ContactView.vue'),
       meta: { layout: 'fullscreen' }
     }
   ]
