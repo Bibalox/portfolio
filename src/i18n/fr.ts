@@ -29,7 +29,7 @@ export const fr = {
     },
     links: {
       title: 'Alors, par où on commence ?',
-      buttonLabel: 'C\'est parti !',
+      buttonLabel: 'C’est parti !',
       references: {
         title: 'Mes références',
         description: 'Découvrez mes travaux majeurs de ces dernières années.'
@@ -54,7 +54,9 @@ export const fr = {
         title: 'Bee Buzziness',
         subtitle: 'Design UI/UX',
         paragraphs: [
-          'Afin d\'assurer sa transition vers le SaaS, Bee Buzziness m\'a confié la mission d\'intégrer l\'utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J\'ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.'
+          'Afin d’assurer sa transition vers le SaaS, Bee Buzziness m’a confié la mission d’intégrer l’utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J’ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.',
+          'Côté UX, nous avons mis en place plusieurs outils de conception efficaces comme des ateliers de co-construction ou encore une méthodologie normalisée de test utilisateur.',
+          'Côté UI, c’est un kit de composants complet qui a vu le jour. Grâce à ces travaux, Bee Buzziness a maintenant une offre produit plus cohérente et surtout plus en accord avec les besoins de nos utilisateurs. Les équipes de développement ne sont pas en reste grâce à un cadre plus rigoureux et moins dispersé. Il en ressort chaque jour un code plus propre et plus rapide à produire.'
         ]
       },
       'france-bureau': {
@@ -68,7 +70,9 @@ export const fr = {
         title: 'Radio France',
         subtitle: 'Signalétique',
         paragraphs: [
-          'La Maison de la Radio est un des joyaux culturels et architecturaux de la ville de Paris. Entre ses salles de concert, ses studios d’enregistrements et son agora, elle est pour Radio France bien plus qu’un siège social. La résidence à l’année de l’Orchestre National de France vient amplifier d’autant plus l’aura de ce haut lieu de la culture française.'
+          'La Maison de la Radio est un des joyaux culturels et architecturaux de la ville de Paris. Entre ses salles de concert, ses studios d’enregistrement et son agora, elle est pour Radio France bien plus qu’un siège social. La résidence à l’année de l’Orchestre National de France vient amplifier d’autant plus l’aura de ce haut lieu de la culture française.',
+          'Dans une optique d’ouverture au public, Radio France a fait appel à Signalyon pour réaliser la signalétique intérieure et extérieure du bâtiment. L’objectif était d’être le plus discret possible afin de ne pas dénaturer la richesse architecturale du bâtiment.',
+          'En prenant en compte l’identité visuelle de Radio France, ainsi que les différentes contraintes (accessibilité, tenue mécanique, résistance au vandalisme) il en est ressorti une signalétique sobre, intemporelle et efficace.'
         ]
       }
     }
