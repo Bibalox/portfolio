@@ -1,36 +1,61 @@
 <script setup lang="ts">
 import ArticleHeader from '@common/ArticleHeader/ArticleHeader.vue'
 import MainButton from '@common/MainButton/MainButton.vue'
+import ReferencesTimeline from './childs/ReferencesTimeline.vue'
 
-const references = ['bee-buzziness', 'france-bureau', 'radio-france']
+const references = [{
+  id: 'bee-buzziness',
+  year: '2017'
+}, {
+  id: 'france-bureau',
+  year: '2015'
+}, {
+  id: 'radio-france'
+}]
+
+const getJunctionType = (index: number, size: number) => {
+  if (index === 0) return 'start-junction'
+  else if (index === size - 1) return 'end-junction'
+  else return 'middle-junction'
+}
 </script>
 
 <template>
-  <article
-    v-for="(reference, index) in references"
-    :key="index"
-    class="reference-link"
-  >
-    <div class="reference-link__card">
-      <img class="reference-link__thumbnail" :src="`/references/${reference}/thumbnail.jpg`" />
-      <div class="reference-link__details">
-        <article-header
-          size="md"
-          :title="$t(`references.values.${reference}.title`)"
-          :subtitle="$t(`references.values.${reference}.subtitle`)"
-        />
-        <p class="reference-link__summary paragraph-sm" v-text="$t(`references.values.${reference}.summary`)" />
-        <main-button :label="$t('references.buttonLabel')" :to="`/references/${reference}`" />
+  <section class="reference-links">
+    <template v-for="(reference, index) in references" :key="index">
+      <div class="reference-links__article">
+        <references-timeline :type="getJunctionType(index, references.length)" />
+        <div class="reference-links__card">
+          <img class="reference-links__thumbnail" :src="`/references/${reference.id}/thumbnail.jpg`" />
+          <div class="reference-links__details">
+            <article-header
+              size="md"
+              :title="$t(`references.values.${reference.id}.title`)"
+              :subtitle="$t(`references.values.${reference.id}.subtitle`)"
+            />
+            <p class="reference-links__summary paragraph-sm" v-text="$t(`references.values.${reference.id}.summary`)" />
+            <main-button :label="$t('references.buttonLabel')" :to="`/references/${reference.id}`" />
+          </div>
+        </div>
       </div>
-    </div>
-  </article>
+      <references-timeline
+        v-if="reference.year"
+        type="timestamp"
+        :label="reference.year"
+      />
+    </template>
+  </section>
 </template>
 
 <style lang="scss">
-.reference-link {
+.reference-links {
   box-sizing: border-box;
   max-width: 1200px;
-  padding: 0 40px 0;
+  padding: 16px 40px 0;
+
+  &__article {
+    display: flex;
+  }
 
   &__card {
     background-color: var(--background-secondary);
@@ -49,7 +74,6 @@ const references = ['bee-buzziness', 'france-bureau', 'radio-france']
     box-sizing: border-box;
     height: 320px;
     object-fit: cover;
-    height: 100%;
     width: 100%;
   }
 
@@ -88,11 +112,15 @@ const references = ['bee-buzziness', 'france-bureau', 'radio-france']
   }
 
   @media (max-width: 680px) {
-    padding: 0 16px;
+    padding: 24px 16px 0;
 
     &__details {
       gap: 16px;
       padding: 24px 16px 20px;
+    }
+
+    &__thumbnail {
+      height: 216px;
     }
 
     &__summary {
