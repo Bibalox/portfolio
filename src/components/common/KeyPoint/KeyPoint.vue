@@ -28,7 +28,6 @@ withDefaults(defineProps<Props>(), {
   --background: var(--accent-alpha-100);
 
   align-items: center;
-  color: var(--system-solid-800);
   display: flex;
   font-weight: 600;
   overflow: hidden;
@@ -44,11 +43,13 @@ withDefaults(defineProps<Props>(), {
   }
 
   &--sm {
+    color: var(--system-solid-700);
     flex-direction: column;
     gap: 12px;
   }
 
   &--lg {
+    color: var(--system-solid-800);
     gap: 16px;
   }
 
