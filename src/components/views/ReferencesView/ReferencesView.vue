@@ -74,8 +74,8 @@ const references = ['bee-buzziness']
   }
 
   @media (max-width: 960px) {
-    max-width: 800px;
-    padding: 24px 16px 0;
+    max-width: 880px;
+    padding: 24px 40px 0;
 
     &__card {
       grid-template-columns: 1fr;
