@@ -16,7 +16,7 @@ const router = createRouter({
       meta: { layout: 'default' }
     },
     {
-      path: '/references/:referenceId',
+      path: '/references/:id',
       component: () => import('@views/ReferenceView.vue'),
       meta: { layout: 'default' }
     },
