@@ -27,7 +27,7 @@ import ArticleHeader from '@common/ArticleHeader.vue'
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 600px;
+  max-width: 600px;
 
   &__paragraph-wrapper {
     display: flex;
