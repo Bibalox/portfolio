@@ -49,7 +49,7 @@ export const fr = {
       next: 'Lire la suite',
       back: 'retour'
     },
-    values: {
+    data: {
       'bee-buzziness': {
         title: 'Bee Buzziness',
         subtitle: 'Design UI/UX',

@@ -30,10 +30,10 @@ const getJunctionType = (index: number, size: number) => {
           <div class="reference-links__details">
             <article-header
               size="md"
-              :title="$t(`references.values.${reference.id}.title`)"
-              :subtitle="$t(`references.values.${reference.id}.subtitle`)"
+              :title="$t(`references.data.${reference.id}.title`)"
+              :subtitle="$t(`references.data.${reference.id}.subtitle`)"
             />
-            <p class="reference-links__summary paragraph-sm" v-text="$t(`references.values.${reference.id}.paragraphs[0]`)" />
+            <p class="reference-links__summary paragraph-sm" v-text="$t(`references.data.${reference.id}.paragraphs[0]`)" />
             <main-button :label="$t('references.buttonLabels.next')" :to="`/references/${reference.id}`" />
           </div>
         </div>
