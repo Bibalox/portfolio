@@ -56,7 +56,7 @@ module.exports = {
       'error',
       {
         'singleline': { 'max': 2 },
-        'multiline': { 'max': 1 }
+        'multiline': { 'max': 2 }
       }
     ],
     'vue/html-self-closing': 0,
