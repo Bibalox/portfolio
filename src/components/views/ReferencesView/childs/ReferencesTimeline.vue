@@ -10,14 +10,10 @@ defineProps<{
     <hr class="references-timeline__rail" />
     <svg
       class="references-timeline__bullet"
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
     >
       <circle
-        cx="8"
-        cy="8"
+        cx="8" cy="8"
         :r="type === 'timestamp' ? '6' : '7'"
         fill="var(--background-primary)"
         :stroke="type === 'timestamp' ? 'var(--accent-solid-600' : 'var(--system-solid-300)'"
@@ -37,22 +33,33 @@ defineProps<{
   align-items: center;
   display: flex;
   flex-shrink: 0;
-  position: relative;
   min-width: 40px;
+  position: relative;
 
-  &--timestamp {
-    gap: 8px;
-    height: 56px;
+  &__bullet {
+    height: 16px;
+    position: relative;
+    width: 16px;
+  }
+
+  &__label {
+    color: var(--accent-solid-600);
+    font-weight: 700;
   }
 
   &__rail {
     background: var(--system-solid-300);
     border: none;
     height: 100%;
+    left: 7px;
     margin: 0;
     position: absolute;
-    left: 7px;
     width: 2px;
+  }
+
+  &--timestamp {
+    gap: 8px;
+    height: 56px;
   }
 
   &--start-junction &__rail {
@@ -61,15 +68,6 @@ defineProps<{
 
   &--end-junction &__rail {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--system-solid-300) 25%);
-  }
-
-  &__bullet {
-    position: relative;
-  }
-
-  &__label {
-    color: var(--accent-solid-600);
-    font-weight: 700;
   }
 }
 </style>
