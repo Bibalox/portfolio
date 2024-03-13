@@ -31,8 +31,6 @@ onMounted(() => {
   let touchend: number
   
   wrapper.value?.addEventListener('pointerdown', function (event) {
-    event.preventDefault()
-    stop()
     touchstart = event.clientX
   }, false)
 
