@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref, onMounted } from 'vue'
+import ReferenceToolbox from './ReferenceToolbox.vue'
+
 import type { Ref } from 'vue'
 
 
@@ -47,22 +49,16 @@ onMounted(() => {
   <section class="reference-carousel">
     <div ref="wrapper" class="reference-carousel__wrapper">
       <transition-group
-        v-for="slide in slides" :key="slide"
-        name="slide"
+        name="slider"
+        class="reference-carousel__slider" tag="div"
       >
         <img
-          :key="slide" :src="`/images/${id}/0${slide}.jpg`"
+          v-for="slide in slides" :key="slide"
+          :src="`/images/${id}/0${slide}.jpg`"
           class="reference-carousel__image"
         />
       </transition-group>
-    </div>
-    <div class="toto__toolbox">
-      <button @click="toPrevSlide">
-        prev
-      </button>
-      <button @click="toNextSlide">
-        next
-      </button>
+      <reference-toolbox @next="toNextSlide()" @prev="toPrevSlide()" />
     </div>
   </section>
 </template>
@@ -73,26 +69,33 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   margin-bottom: 56px;
-  position: relative;
+  -webkit-user-select: none;
   user-select: none;
   width: 100%;
 
   &__wrapper {
-    align-items: center;
-    cursor: grab;
     display: flex;
-    height: 100%;
     justify-content: center;
     max-width: 960px;
-    overflow: hidden;
+    position: relative;
     width: 100%;
+  }
+
+  &__slider {
+  align-items: center;
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+
+    & .slider-move {
+      transition: transform 0.3s;
+    }
 
     &:active {
       cursor: grabbing;
-    }
-
-    & .slide-move {
-      transition: transform 0.3s;
     }
   }
 
@@ -116,17 +119,4 @@ onMounted(() => {
     margin-bottom: 32px;
   }
 }
-
-.toto {
-  &__toolbox {
-    background: coral;
-    padding: 4px 6px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    display: flex;
-    gap: 20px;
-    position: absolute;
-    bottom: 24px;
-  }
-}
-</style>
+</style>./ReferenceToolbox.vue
