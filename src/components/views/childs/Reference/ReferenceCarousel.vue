@@ -1,24 +1,53 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref, onMounted } from 'vue'
+import type { Ref } from 'vue'
+
+
+// Props & data
 
 defineProps<{ id: string | string[] }>()
 
+const wrapper: Ref<HTMLBaseElement | null> = ref(null)
 const slides = reactive([4, 5, 1, 2, 3])
 
-const next = () => {
+
+// Methods
+
+const toNextSlide = () => {
   const firstSlide = slides.shift()
   if (firstSlide) slides.push(firstSlide)
 }
 
-const prev = () => {
+const toPrevSlide = () => {
   const lastSlide = slides.pop()
   if (lastSlide) slides.unshift(lastSlide)
 }
+
+
+// Init
+
+onMounted(() => {
+  let touchstart: number
+  let touchend: number
+  
+  wrapper.value?.addEventListener('pointerdown', function (event) {
+    event.preventDefault()
+    stop()
+    touchstart = event.clientX
+  }, false)
+
+  wrapper.value?.addEventListener('pointerup', function (event) {
+    event.preventDefault()
+    touchend = event.clientX
+    if (touchend < touchstart) toNextSlide()
+    else if (touchend > touchstart) toPrevSlide()
+  }, false)
+})
 </script>
 
 <template>
   <section class="reference-carousel">
-    <div class="reference-carousel__wrapper">
+    <div ref="wrapper" class="reference-carousel__wrapper">
       <transition-group
         v-for="slide in slides" :key="slide"
         name="slide"
@@ -30,10 +59,10 @@ const prev = () => {
       </transition-group>
     </div>
     <div class="toto__toolbox">
-      <button @click="prev">
+      <button @click="toPrevSlide">
         prev
       </button>
-      <button @click="next">
+      <button @click="toNextSlide">
         next
       </button>
     </div>
@@ -52,12 +81,17 @@ const prev = () => {
 
   &__wrapper {
     align-items: center;
+    cursor: grab;
     display: flex;
     height: 100%;
     justify-content: center;
     max-width: 960px;
     overflow: hidden;
     width: 100%;
+
+    &:active {
+      cursor: grabbing;
+    }
 
     & .slide-move {
       transition: transform 0.3s;
