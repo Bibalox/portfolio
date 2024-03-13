@@ -47,7 +47,7 @@ export const fr = {
   references: {
     buttonLabels: {
       next: 'Lire la suite',
-      back: 'retour'
+      back: 'Retour'
     },
     data: {
       'bee-buzziness': {
