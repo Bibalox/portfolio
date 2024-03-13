@@ -26,7 +26,7 @@ const getJunctionType = (index: number, size: number) => {
       <div class="reference-links__article">
         <references-timeline :type="getJunctionType(index, references.length)" />
         <div class="reference-links__card">
-          <img class="reference-links__thumbnail" :src="`/references/${reference.id}/thumbnail.jpg`" />
+          <img class="reference-links__thumbnail" :src="`/images/${reference.id}/thumbnail.jpg`" />
           <div class="reference-links__details">
             <article-header
               size="md"
