@@ -4,7 +4,7 @@ import ArticleHeader from '@common/ArticleHeader.vue'
 </script>
 
 <template>
-  <reference-carousel :id="$route.params.id" :amount="4" />
+  <reference-carousel :id="$route.params.id" />
   <section class="reference-section">
     <article-header
       size="lg"
