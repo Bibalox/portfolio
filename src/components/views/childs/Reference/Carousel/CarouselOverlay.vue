@@ -24,12 +24,34 @@ defineEmits(['next', 'prev'])
 
 <style lang="scss">
 .carousel-overlay {
+  animation: firstAppearance 1.2s;
   cursor: grab;
   display: flex;
   height: 100%;
   justify-content: center;
+  opacity: 0;
   position: absolute;
+  transition: opacity .2s 1s;
   width: 100%;
+  
+  @keyframes firstAppearance {
+    0%, 95% { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transition: none;
+      opacity: 1;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      transition: none;
+      opacity: 1;
+    }
+  }
 
   &:active {
     cursor: grabbing;
@@ -72,10 +94,6 @@ defineEmits(['next', 'prev'])
   }
 
   @media (max-width: 960px) {
-
-  }
-
-  @media (max-width: 960px) {
     &__toolbox {
       &--back-button {
       top: 8px;
@@ -88,4 +106,4 @@ defineEmits(['next', 'prev'])
     }
   }
 }
-</style>./CarouselButton.vue
+</style>

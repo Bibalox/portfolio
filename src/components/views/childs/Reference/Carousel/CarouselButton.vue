@@ -47,7 +47,9 @@ defineEmits(['click'])
   height: 38px;
   padding: 0 11px;
   text-decoration: none;
+  touch-action: manipulation;
   transition: background-color .2s;
+
 
   &__label {
     color: var(--system-solid-900);
