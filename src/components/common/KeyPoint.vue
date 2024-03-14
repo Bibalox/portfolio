@@ -1,22 +1,27 @@
 <script setup lang="ts">
 import BoardIcon from '@common/BoardIcon.vue'
 
-interface Props {
+defineProps<{
   size: 'sm' | 'lg'
   icon: string
   label: string
-  to: string
+  to?: string
   weight?: string
-}
-
-withDefaults(defineProps<Props>(), { weight: '1' })
+}>()
 </script>
 
 <template>
-  <a :href="to" :class="`key-point key-point--${size} key-point--weight-${weight}`">
+  <a
+    v-if="to" :href="to"
+    :class="`key-point key-point--link key-point--${size} key-point--weight-${weight ?? 1}`"
+  >
     <board-icon :id="icon" />
     <span class="key-point__label label-sm" v-text="label" />
   </a>
+  <div v-else :class="`key-point key-point--${size} key-point--weight-${weight ?? 1}`">
+    <board-icon :id="icon" />
+    <span class="key-point__label label-sm" v-text="label" />
+  </div>
 </template>
 
 <style lang="scss">
@@ -35,7 +40,6 @@ withDefaults(defineProps<Props>(), { weight: '1' })
   &__label {
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: center;
     white-space: nowrap;
     width: 100%;
   }
@@ -44,11 +48,13 @@ withDefaults(defineProps<Props>(), { weight: '1' })
     color: var(--system-solid-700);
     flex-direction: column;
     gap: 12px;
+    text-align: center;
   }
 
   &--lg {
     color: var(--system-solid-800);
     gap: 16px;
+    text-align: left;
   }
 
   &--weight-1 {
@@ -63,7 +69,7 @@ withDefaults(defineProps<Props>(), { weight: '1' })
     flex: 3;
   }
 
-  &:hover {
+  &--link:hover {
     --primary-stroke: var(--accent-solid-600);
     --secondary-stroke: var(--accent-solid-500);
     --background: var(--accent-alpha-200);

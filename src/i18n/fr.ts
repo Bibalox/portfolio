@@ -76,5 +76,43 @@ export const fr = {
         ]
       }
     }
+  },
+  skills: {
+    tools: {
+      title: 'Outils',
+      list: {
+        figma: 'Figma',
+        sketch: 'Sketch',
+        html: 'HTML + CSS',
+        vue: 'Vue',
+        typescript: 'TypeScript'
+      }
+    },
+    strengths: {
+      title: 'Points forts',
+      list: {
+        'team-work': 'Travail en équipe',
+        discipline: 'Rigueur & discipline',
+        optimization: 'Sens de l’optimisation',
+        'problem-solving': 'Recherche de solution',
+        smile: 'Sourire & humour'
+      } 
+
+    },
+    languages: {
+      title: 'Langues',
+      list: {
+        french: 'Français',
+        english: 'Anglais'
+      }
+    },
+    diplomas: {
+      title: 'Diplômes',
+      list: [
+        'Licence plasturgie & environnement',
+        'DUT chimie des matériaux',
+        'Baccalauréat scientifique'
+      ]
+    }
   }
 }

@@ -5,10 +5,12 @@ defineProps<{ title: string }>()
 </script>
 
 <template>
-  <div class="skill-card">
+  <article class="skill-card">
     <article-header :title="title" size="sm" />
-    <slot />
-  </div>
+    <div class="skill-card__content">
+      <slot />
+    </div>
+  </article>
 </template>
 
 <style lang="scss">
@@ -21,5 +23,11 @@ defineProps<{ title: string }>()
   flex-direction: column;
   gap: 20px;
   padding: 24px 32px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 </style>
