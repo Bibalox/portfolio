@@ -32,6 +32,10 @@ html, body {
   height: 100%;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background-color: var(--background-primary);
 }
