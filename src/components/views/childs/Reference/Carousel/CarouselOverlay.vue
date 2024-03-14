@@ -24,15 +24,21 @@ defineEmits(['next', 'prev'])
 
 <style lang="scss">
 .carousel-overlay {
+  cursor: grab;
   display: flex;
   height: 100%;
   justify-content: center;
   position: absolute;
   width: 100%;
+
+  &:active {
+    cursor: grabbing;
+  }
   
   &__toolbox {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
+    cursor: default;
     display: flex;
     overflow: hidden;
     position: absolute;

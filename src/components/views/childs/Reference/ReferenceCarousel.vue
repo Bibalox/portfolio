@@ -39,8 +39,8 @@ onMounted(() => {
   wrapper.value?.addEventListener('pointerup', function (event) {
     event.preventDefault()
     touchend = event.clientX
-    if (touchend < touchstart) toNextSlide()
-    else if (touchend > touchstart) toPrevSlide()
+    if (touchend < touchstart - 100) toNextSlide()
+    else if (touchend > touchstart + 100) toPrevSlide()
   }, false)
 })
 </script>
@@ -82,7 +82,6 @@ onMounted(() => {
 
   &__slider {
   align-items: center;
-  cursor: grab;
   display: flex;
   justify-content: center;
   height: 100%;
@@ -91,10 +90,6 @@ onMounted(() => {
 
     & .slider-move {
       transition: transform 0.3s;
-    }
-
-    &:active {
-      cursor: grabbing;
     }
   }
 
