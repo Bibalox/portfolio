@@ -81,7 +81,7 @@ const getJunctionType = (index: number, size: number) => {
   
     @media (hover: hover) {
       &:hover {
-        transform: translateY(-3px);
+        transform: translateY(-4px);
       }
     }
   }
