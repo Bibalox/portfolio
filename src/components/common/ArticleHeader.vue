@@ -4,16 +4,22 @@ defineProps<{
   title: string
   subtitle?: string
 }>()
+
+const textSizes = {
+  'sm': 'title-sm',
+  'md': 'title-md',
+  'lg': 'label-lg'
+}
 </script>
 
 <template>
   <header :class="`article-header article-header--${size}`">
-    <hr class="article-header__decoration" />
+    <hr :class="`article-header__decoration article-header__decoration--${size}`" />
     <div class="article-header__texts">
       <h2
         :class="[
           'article-header__title',
-          size === 'lg' ? 'title-md' : 'label-lg'
+          textSizes[size]
         ]"
         v-text="title"
       />
@@ -21,7 +27,7 @@ defineProps<{
         v-if="size !== 'sm'"
         :class="[
           'article-header__subtitle',
-          size === 'lg' ? 'label-lg' : 'label-md'
+          textSizes[size]
         ]"
         v-text="subtitle"
       />
@@ -42,6 +48,10 @@ defineProps<{
     flex-shrink: 0;
     margin: 0;
     width: 3px;
+
+    &--sm {
+      margin: 4px 0;
+    }
   }
 
   &__texts {
