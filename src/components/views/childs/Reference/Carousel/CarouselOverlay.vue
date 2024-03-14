@@ -104,6 +104,7 @@ defineEmits(['next', 'prev'])
 
   @media (hover: hover) {
     &:hover {
+      animation: none;
       transition: none;
       opacity: 1;
     }
@@ -111,6 +112,7 @@ defineEmits(['next', 'prev'])
 
   @media (hover: none) {
     &:active {
+      animation: none;
       transition: none;
       opacity: 1;
     }
