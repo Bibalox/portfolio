@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import CarouselButton from './CarouselButton.vue'
 
+defineProps<{ activeBullet: number }>()
 defineEmits(['next', 'prev'])
 </script>
 
@@ -17,6 +18,15 @@ defineEmits(['next', 'prev'])
     <div class="carousel-overlay__toolbox carousel-overlay__toolbox--navigation">
       <div class="carousel-overlay__toolbox-background" />
       <carousel-button icon="chevron-left-24" @click="$emit('prev')" />
+      <div class="carousel-overlay__bullet-wrapper">
+        <div
+          v-for="bullet in 5" :key="bullet"
+          :class="[
+            'carousel-overlay__bullet',
+            { 'carousel-overlay__bullet--active' : bullet === activeBullet }
+          ]"
+        />
+      </div>
       <carousel-button icon="chevron-right-24" @click="$emit('next')" />
     </div>
   </div>
@@ -34,30 +44,8 @@ defineEmits(['next', 'prev'])
   transition: opacity .2s 1s;
   width: 100%;
   
-  @keyframes firstAppearance {
-    0%, 95% { opacity: 1; }
-    to { opacity: 0; }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      transition: none;
-      opacity: 1;
-    }
-  }
-
-  @media (hover: none) {
-    &:active {
-      transition: none;
-      opacity: 1;
-    }
-  }
-
-  &:active {
-    cursor: grabbing;
-  }
-  
   &__toolbox {
+    align-items: center;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     cursor: default;
@@ -93,6 +81,41 @@ defineEmits(['next', 'prev'])
     z-index: -1;
   }
 
+  &__bullet-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__bullet {
+    background-color: var(--system-alpha-400);
+    border-radius: 4px;
+    height: 8px;
+    transition: background-color .2s;
+    width: 8px;
+
+    &--active {
+      background-color: var(--system-solid-900);
+    }
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transition: none;
+      opacity: 1;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      transition: none;
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 960px) {
     &__toolbox {
       &--back-button {
@@ -104,6 +127,11 @@ defineEmits(['next', 'prev'])
         bottom: 16px;
       }
     }
+  }
+  
+  @keyframes firstAppearance {
+    0%, 95% { opacity: 1; }
+    to { opacity: 0; }
   }
 }
 </style>

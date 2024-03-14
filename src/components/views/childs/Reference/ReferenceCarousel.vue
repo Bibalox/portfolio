@@ -11,6 +11,7 @@ defineProps<{ id: string | string[] }>()
 
 const wrapper: Ref<HTMLBaseElement | null> = ref(null)
 const slides = reactive([4, 5, 1, 2, 3])
+const currentSlide = ref(1)
 
 
 // Methods
@@ -18,11 +19,15 @@ const slides = reactive([4, 5, 1, 2, 3])
 const toNextSlide = () => {
   const firstSlide = slides.shift()
   if (firstSlide) slides.push(firstSlide)
+
+  currentSlide.value = currentSlide.value === 5 ? 1 : currentSlide.value + 1
 }
 
 const toPrevSlide = () => {
   const lastSlide = slides.pop()
   if (lastSlide) slides.unshift(lastSlide)
+
+  currentSlide.value = currentSlide.value === 1 ? 5 : currentSlide.value - 1
 }
 
 
@@ -58,7 +63,11 @@ onMounted(() => {
           class="reference-carousel__image"
         />
       </transition-group>
-      <carousel-overlay @next="toNextSlide()" @prev="toPrevSlide()" />
+      <carousel-overlay
+        :active-bullet="currentSlide"
+        @next="toNextSlide()"
+        @prev="toPrevSlide()"
+      />
     </div>
   </section>
 </template>
@@ -113,4 +122,4 @@ onMounted(() => {
     margin-bottom: 32px;
   }
 }
-</style>./ReferenceToolbox.vue./ReferenceOverlay.vue
+</style>
