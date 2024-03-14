@@ -9,7 +9,7 @@ import type { Ref } from 'vue'
 
 defineProps<{ id: string | string[] }>()
 
-const wrapper: Ref<HTMLBaseElement | null> = ref(null)
+const carousel: Ref<HTMLBaseElement | null> = ref(null)
 const slides = reactive([4, 5, 1, 2, 3])
 const currentSlide = ref(1)
 
@@ -34,25 +34,45 @@ const toPrevSlide = () => {
 // Init
 
 onMounted(() => {
-  let touchstart: number
-  let touchend: number
-  
-  wrapper.value?.addEventListener('pointerdown', function (event) {
-    touchstart = event.clientX
-  }, false)
 
-  wrapper.value?.addEventListener('pointerup', function (event) {
-    event.preventDefault()
-    touchend = event.clientX
-    if (touchend < touchstart - 100) toNextSlide()
-    else if (touchend > touchstart + 100) toPrevSlide()
-  }, false)
+  // Swipe while the pointer (mouse or touch) is moving
+  const pointer = {
+    start: 0,
+    end: 0
+  }
+
+  carousel.value?.addEventListener('pointerdown', event => {
+    pointer.start = event.clientX
+  })
+
+  carousel.value?.addEventListener('pointerup', event => {
+    pointer.end = event.clientX
+    if (pointer.end - pointer.start < -100) toNextSlide()
+    else if (pointer.end - pointer.start > 100) toPrevSlide()
+  }, true)
+
+
+  // Prevent the scroll while swiping
+  const touch = {
+    start: 0,
+    end: 0
+  }
+
+  carousel.value?.addEventListener('touchstart', event => {
+    touch.start = event.touches[0].clientY
+  })
+
+  carousel.value?.addEventListener('touchmove', event => {
+    touch.end = event.touches[0].clientY
+    console.log(pointer.end - pointer.start)
+    if (Math.abs(touch.end - touch.start) < 10) event.preventDefault()
+  })
 })
 </script>
 
 <template>
-  <section class="reference-carousel">
-    <div ref="wrapper" class="reference-carousel__wrapper">
+  <section ref="carousel" class="reference-carousel">
+    <div class="reference-carousel__carousel">
       <transition-group
         name="slider"
         class="reference-carousel__slider" tag="div"
@@ -82,7 +102,7 @@ onMounted(() => {
   user-select: none;
   width: 100%;
 
-  &__wrapper {
+  &__carousel {
     display: flex;
     max-width: 960px;
     position: relative;
