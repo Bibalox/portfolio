@@ -6,9 +6,15 @@ defineProps<{
 }>()
 
 const textSizes = {
-  'sm': 'title-sm',
-  'md': 'title-md',
-  'lg': 'label-lg'
+  title: {
+    sm: 'title-sm',
+    md: 'label-lg',
+    lg: 'title-md'
+  },
+  subtitle: {
+    md: 'label-md',
+    lg: 'label-lg'
+  }
 }
 </script>
 
@@ -19,7 +25,7 @@ const textSizes = {
       <h2
         :class="[
           'article-header__title',
-          textSizes[size]
+          textSizes.title[size]
         ]"
         v-text="title"
       />
@@ -27,7 +33,7 @@ const textSizes = {
         v-if="size !== 'sm'"
         :class="[
           'article-header__subtitle',
-          textSizes[size]
+          textSizes.subtitle[size]
         ]"
         v-text="subtitle"
       />
