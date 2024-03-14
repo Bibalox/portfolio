@@ -85,10 +85,12 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
 
   @media (max-width: 960px) {
     gap: 24px;
+    padding: 16px 40px 0;
   }
 
   @media (max-width: 680px) {
     gap: 16px;
+    padding: 16px 16px 0;
   }
 }
 </style>
