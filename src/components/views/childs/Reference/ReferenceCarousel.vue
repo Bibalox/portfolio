@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive, ref, onMounted } from 'vue'
-import ReferenceToolbox from './ReferenceToolbox.vue'
+import CarouselOverlay from './Carousel/CarouselOverlay.vue'
 
 import type { Ref } from 'vue'
 
@@ -58,7 +58,7 @@ onMounted(() => {
           class="reference-carousel__image"
         />
       </transition-group>
-      <reference-toolbox @next="toNextSlide()" @prev="toPrevSlide()" />
+      <carousel-overlay @next="toNextSlide()" @prev="toPrevSlide()" />
     </div>
   </section>
 </template>
@@ -75,7 +75,6 @@ onMounted(() => {
 
   &__wrapper {
     display: flex;
-    justify-content: center;
     max-width: 960px;
     position: relative;
     width: 100%;
@@ -119,4 +118,4 @@ onMounted(() => {
     margin-bottom: 32px;
   }
 }
-</style>./ReferenceToolbox.vue
+</style>./ReferenceToolbox.vue./ReferenceOverlay.vue
