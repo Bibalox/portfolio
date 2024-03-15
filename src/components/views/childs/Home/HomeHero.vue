@@ -49,7 +49,6 @@
     width: 100%;
 
     & strong {
-      color: var(--system-solid-800); // Fix to smooth the color transition when switching theme
       font-weight: 700;
     }
   }
