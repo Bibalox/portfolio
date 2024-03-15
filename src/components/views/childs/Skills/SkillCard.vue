@@ -20,8 +20,10 @@ defineProps<{ title: string }>()
   border-radius: 18px;
   box-sizing: border-box;
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 20px;
+  min-width: 360px;
   padding: 24px 32px;
 
   &__content {

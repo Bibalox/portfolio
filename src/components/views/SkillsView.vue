@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import SkillSlider from './childs/Skills/SkillSlider.vue'
 import SkillCard from './childs/Skills/SkillCard.vue'
+import SkillsHero from './childs/Skills/SkillsHero.vue'
+import SkillSlider from './childs/Skills/SkillSlider.vue'
 import KeyPoint from '@common/KeyPoint.vue'
 
 const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving', 'smile']
@@ -46,15 +47,16 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
         />
       </div>
     </skill-card>
+    <skills-hero />
   </section>
 </template>
 
 <style lang="scss">
 .skill-section {
   box-sizing: border-box;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   max-width: 1200px;
   padding: 24px 40px 0;
   width: 100%;
