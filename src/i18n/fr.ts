@@ -96,8 +96,7 @@ export const fr = {
         optimization: 'Sens de l’optimisation',
         'problem-solving': 'Recherche de solution',
         smile: 'Sourire & humour'
-      } 
-
+      }
     },
     languages: {
       title: 'Langues',
@@ -113,6 +112,10 @@ export const fr = {
         'DUT chimie des matériaux',
         'Baccalauréat scientifique'
       ]
+    },
+    hero: {
+      title: 'Vous préférez consulter tout ça sur papier ?',
+      buttonLabel: 'Téléchargez mon CV'
     }
   }
 }

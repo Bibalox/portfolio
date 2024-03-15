@@ -1,11 +1,18 @@
 <script setup lang="ts">
+import MainButton from '@common/MainButton.vue'
 </script>
 
 <template>
   <div class="skills-hero">
     <div class="skills-hero__cover skills-hero__cover--color" />
     <div class="skills-hero__cover skills-hero__cover--blur" />
-    <span>Hello world!</span>
+    <div class="skills-hero__content">
+      <h2 class="skills-hero__title title-sm" v-text="$t('skills.hero.title')" />
+      <main-button
+        type="file" to="/CV_Jean-Baptiste_BAL.pdf"
+        :label="$t('skills.hero.buttonLabel')"
+      />
+    </div>
   </div>
 </template>
 
@@ -18,8 +25,6 @@
   border-radius: $default-radius;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  gap: 32px;
   height: 256px;
   justify-content: center;
   overflow: hidden;
@@ -27,12 +32,19 @@
   position: relative;
   width: 100%;
 
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+  }
+
   &__title {
     color: var(--system-solid-800);
-    position: relative;
-    margin: 12px 0;
-    max-width: 600px;
-    width: 100%;
+    margin: 0;
+    max-width: 320px;
+    text-align: center;
   }
 
   &__cover {
@@ -59,8 +71,11 @@
     $small-radius: 14px;
 
     border-radius: $small-radius;
-    gap: 48px;
     height: 512px;
+
+    &__content {
+      gap: 48px;
+    }
 
     &__cover--blur {
       border-radius: $small-radius;

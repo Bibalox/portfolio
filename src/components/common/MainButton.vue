@@ -2,7 +2,7 @@
 interface Props {
   label: string
   to: string
-  type?: 'link' | 'file' 
+  type?: 'link' | 'file'
 }
 
 withDefaults(defineProps<Props>(), {
