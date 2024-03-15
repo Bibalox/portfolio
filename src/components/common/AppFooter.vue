@@ -33,6 +33,7 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
           size="sm"
           to="https://www.qwant.com/maps/#map=12.35/45.1831393/5.7477362"
           weight="2"
+          target="_blank"
         />
       </div>
     </div>

@@ -34,18 +34,21 @@ import KeyPoint from '@common/KeyPoint.vue'
           label="Instagram"
           size="sm"
           to="https://www.instagram.com/_project67_/"
+          target="_blank"
         />
         <key-point
           icon="medium-32"
           label="Medium"
           size="sm"
           to="https://medium.com/@project67"
+          target="_blank"
         />
         <key-point
           icon="github-32"
           label="GitHub"
           size="sm"
           to="https://github.com/Bibalox"
+          target="_blank"
         />
       </section>
     </article>
