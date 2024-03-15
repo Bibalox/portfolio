@@ -9,10 +9,13 @@ const route = useRoute()
 const app = document.querySelector('#app')
 
 watch(route, () => {
+  const classList = app?.classList
   if (route.meta.layout === 'default') {
-    app?.classList.add('app--default-layout')
+    classList?.add('app--default-layout')
+    classList?.remove('app--fullscreen-layout')
   } else {
-    app?.classList.remove('app--default-layout')
+    classList?.add('app--fullscreen-layout')
+    classList?.remove('app--default-layout')
   }
 })
 </script>
@@ -38,6 +41,10 @@ html {
 
 body {
   background-color: var(--background-primary);
+
+  &:has(.app--fullscreen-layout) {
+    overflow: hidden;
+  }
 }
 
 .app {
