@@ -69,5 +69,13 @@ defineProps<{
   &--end-junction &__rail {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, var(--system-solid-300) 25%);
   }
+
+  @media (max-width: 960px) {
+    min-width: 44px;
+  }
+
+  @media (max-width: 680px) {
+    min-width: 32px;
+  }
 }
 </style>
