@@ -1,14 +1,29 @@
 <script setup lang="ts">
-defineProps<{
+interface Props {
   label: string
   to: string
-}>()
+  type?: 'link' | 'file' 
+}
+
+withDefaults(defineProps<Props>(), {
+  type: 'link'
+})
 </script>
 
 <template>
-  <router-link :to="to" class="main-button">
+  <router-link
+    v-if="type === 'link'" :to="to"
+    class="main-button"
+  >
     <span class="main-button__label label-md" v-text="label" />
   </router-link>
+  <a
+    v-else
+    :href="to" target="_blank"
+    class="main-button"
+  >
+    <span class="main-button__label label-md" v-text="label" />
+  </a>
 </template>
 
 <style lang="scss">
