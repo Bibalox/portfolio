@@ -117,5 +117,10 @@ export const fr = {
       title: 'Vous préférez consulter tout ça sur papier ?',
       buttonLabel: 'Téléchargez mon CV'
     }
-  }
+  },
+  notFound: {
+    title: 'Oh non !',
+    message: 'Il semblerait que cette page n’existe pas 😢',
+    buttonLabel: 'Retourner à l’accueil'
+  } 
 }

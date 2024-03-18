@@ -34,6 +34,11 @@ const router = createRouter({
       name: 'contact',
       component: () => import('@views/ContactView.vue'),
       meta: { layout: 'fullscreen' }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      component: () => import('@views/NotFoundView.vue'),
+      meta: { layout: 'fullscreen' }
     }
   ]
 })
