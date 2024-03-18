@@ -61,7 +61,7 @@ defineEmits(['next', 'prev'])
     }
 
     &--navigation {
-      border-radius: 16px;
+      border-radius: 15px;
       bottom: 24px;
       box-sizing: border-box;
       justify-content: space-between;
