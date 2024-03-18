@@ -26,9 +26,7 @@ const getJunctionType = (index: number, size: number) => {
       <div class="reference-links__article">
         <references-timeline :type="getJunctionType(index, references.length)" />
         <div class="reference-links__card">
-          <router-link :to="`/references/${reference.id}`" class="reference-links__thumbnail-wrapper">
-            <img class="reference-links__thumbnail" :src="`/images/${reference.id}/thumbnail.jpg`" />
-          </router-link>
+          <img class="reference-links__thumbnail" :src="`/images/${reference.id}/thumbnail.jpg`" />
           <div class="reference-links__details">
             <article-header
               size="md"
@@ -70,26 +68,14 @@ const getJunctionType = (index: number, size: number) => {
     padding: 8px;
   }
 
-  &__thumbnail-wrapper {
-    border: 1px solid var(--system-alpha-200);
-    border-radius: 8px;
-    box-sizing: border-box;
-    display: flex;
-    height: 320px;
-    overflow: hidden;
-    transition: transform .2s;
-  
-    @media (hover: hover) {
-      &:hover {
-        transform: translateY(-4px);
-      }
-    }
-  }
-
   &__thumbnail {
-    height: 100%;
     object-fit: cover;
     width: 100%;
+
+    border-radius: 8px;
+    border: 1px solid var(--system-alpha-200);
+    height: 320px;
+    box-sizing: border-box;
   }
 
   &__details {
@@ -134,7 +120,7 @@ const getJunctionType = (index: number, size: number) => {
       padding: 24px 16px 20px;
     }
 
-    &__thumbnail-wrapper {
+    &__thumbnail {
       height: 216px;
     }
 
