@@ -71,6 +71,10 @@ const routes = ['home', 'references', 'skills', 'contact']
 
     height: 32px;
     width: 228px;
+
+    &:hover {
+      --text: var(--accent-solid-600);
+    }
     
     &--compact {
       display: none;
