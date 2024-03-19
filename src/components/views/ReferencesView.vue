@@ -4,13 +4,22 @@ import MainButton from '@common/MainButton.vue'
 import ReferencesTimeline from './childs/References/ReferencesTimeline.vue'
 
 const references = [{
+  id: 'studio-base-2',
+  year: '2021'
+}, {
   id: 'bee-buzziness',
   year: '2017'
 }, {
   id: 'france-bureau',
   year: '2015'
 }, {
-  id: 'radio-france'
+  id: 'radio-france',
+  year: '2014'
+}, {
+  id: 'lakka-tv',
+  year: '2013'
+}, {
+  id: 'freelance'
 }]
 
 const getJunctionType = (index: number, size: number) => {
@@ -26,7 +35,7 @@ const getJunctionType = (index: number, size: number) => {
       <div class="reference-links__article">
         <references-timeline :type="getJunctionType(index, references.length)" />
         <div class="reference-links__card">
-          <img class="reference-links__thumbnail" :src="`/images/${reference.id}/thumbnail.jpg`" />
+          <img class="reference-links__thumbnail" :src="`/references/${reference.id}/thumbnail.jpg`" />
           <div class="reference-links__details">
             <article-header
               size="md"

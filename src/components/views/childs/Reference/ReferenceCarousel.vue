@@ -79,7 +79,7 @@ onMounted(() => {
       >
         <img
           v-for="slide in slides" :key="slide"
-          :src="`/images/${id}/0${slide}.jpg`"
+          :src="`/references/${id}/0${slide}.jpg`"
           class="reference-carousel__image"
         />
       </transition-group>
