@@ -64,7 +64,7 @@ export const fr = {
         title: 'Bee Buzziness',
         subtitle: 'Design UI/UX',
         paragraphs: [
-          'Afin d’orientier son offre vers le grand public, Bee Buzziness m’a confié la mission d’intégrer l’utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J’ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.',
+          'Afin d’orienter son offre vers le grand public, Bee Buzziness m’a confié la mission d’intégrer l’utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J’ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.',
           'Côté UX, nous avons mis en place plusieurs outils de conception efficaces comme des ateliers de co-construction ou encore une méthodologie normalisée de test utilisateur.',
           'Côté UI, c’est un kit de composants complet qui a vu le jour. Grâce à ces travaux, Bee Buzziness a maintenant une offre produit plus cohérente et surtout plus en accord avec les besoins de nos utilisateurs. Les équipes de développement ne sont pas en reste grâce à un cadre plus rigoureux et moins dispersé. Il en ressort chaque jour un code plus propre et plus rapide à produire.'
         ]
