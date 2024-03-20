@@ -9,7 +9,7 @@ import MainButton from '@common/MainButton.vue'
     <div class="skills-hero__content">
       <h2 class="skills-hero__title title-sm" v-text="$t('skills.hero.title')" />
       <main-button
-        type="file" to="/CV_Jean-Baptiste_BAL.pdf"
+        type="file" to="/cv_jean-baptiste_bal_fr.pdf"
         :label="$t('skills.hero.buttonLabel')"
       />
     </div>
