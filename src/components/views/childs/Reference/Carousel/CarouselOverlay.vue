@@ -34,17 +34,16 @@ defineEmits(['next', 'prev'])
 
 <style lang="scss">
 .carousel-overlay {
-  animation: .2s 4s firstAppearance both;
   cursor: grab;
   display: flex;
   height: 100%;
   justify-content: center;
-  opacity: 1;
   position: absolute;
   width: 100%;
   
   &__toolbox {
     align-items: center;
+    animation: .1s 4s firstAppearance both;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     cursor: default;
@@ -102,14 +101,14 @@ defineEmits(['next', 'prev'])
   }
 
   @media (hover: hover) {
-    &:hover {
+    &:hover &__toolbox {
       animation: none;
-      opacity: 1;
+      display: flex;
     }
   }
 
   @media (hover: none) {
-    &:active {
+    &:active &__toolbox {
       animation: none;
       opacity: 1;
     }
@@ -129,7 +128,7 @@ defineEmits(['next', 'prev'])
   }
   
   @keyframes firstAppearance {
-    to { opacity: 0; }
+    to { display: none; }
   }
 }
 </style>
