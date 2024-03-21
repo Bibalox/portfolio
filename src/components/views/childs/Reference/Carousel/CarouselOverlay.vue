@@ -43,7 +43,7 @@ defineEmits(['next', 'prev'])
   
   &__toolbox {
     align-items: center;
-    animation: .1s 4s firstAppearance both;
+    animation: .1s 4s fadeOut both;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     cursor: default;
@@ -65,6 +65,11 @@ defineEmits(['next', 'prev'])
       justify-content: space-between;
       padding: 4px;
       width: 280px;
+    }
+  
+    @keyframes fadeOut {
+      from { visibility: visible; }
+      to { visibility: hidden; }
     }
   }
 
@@ -103,14 +108,14 @@ defineEmits(['next', 'prev'])
   @media (hover: hover) {
     &:hover &__toolbox {
       animation: none;
-      display: flex;
+      visibility: visible;
     }
   }
 
   @media (hover: none) {
     &:active &__toolbox {
       animation: none;
-      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -125,10 +130,6 @@ defineEmits(['next', 'prev'])
         bottom: 16px;
       }
     }
-  }
-  
-  @keyframes firstAppearance {
-    to { display: none; }
   }
 }
 </style>
