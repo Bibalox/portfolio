@@ -77,6 +77,7 @@ onMounted(() => {
         name="slider"
         class="reference-carousel__slider" tag="div"
       >
+        <div class="reference-carousel__placeholder" />
         <img
           v-for="slide in slides" :key="slide"
           :src="`/references/${id}/0${slide}.jpg`"
@@ -110,6 +111,7 @@ onMounted(() => {
   }
 
   &__slider {
+  aspect-ratio: 16 / 10;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -122,11 +124,20 @@ onMounted(() => {
     }
   }
 
+  &__placeholder {
+    background-color: var(--system-alpha-200);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
   &__image {
     aspect-ratio: 16 / 10;
     display: flex;
     object-fit: cover;
     pointer-events: none;
+    position: relative;
+    height: 100%;
     width: 100%;
     
     &:first-child, &:last-child {
