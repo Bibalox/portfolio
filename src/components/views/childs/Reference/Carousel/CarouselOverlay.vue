@@ -43,7 +43,7 @@ defineEmits(['next', 'prev'])
   
   &__toolbox {
     align-items: center;
-    animation: .1s 4s fadeOut both;
+    animation: .1s 1.5s fadeOut both;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     cursor: default;
