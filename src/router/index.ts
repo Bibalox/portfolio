@@ -20,11 +20,7 @@ const router = createRouter({
       return { left: 0, top: 0 }
     }
     const scrollpos = savedPosition || to.meta?.scrollPos || { left: 0, top: 0 }
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(scrollpos)
-      }, 0)
-    })
+    return new Promise(resolve => resolve(scrollpos))
   },
   routes: [
     {
