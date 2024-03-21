@@ -1,9 +1,30 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
+type ScrollPositionNormalized = {
+  behavior?: ScrollOptions['behavior']
+  left: number
+  top: number
+}
+
+declare module 'vue-router' {
+  interface RouteMeta {
+    scrollPos?: ScrollPositionNormalized
+  }
+}
+
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  scrollBehavior() {
-    return { top: 0 }
+  scrollBehavior(to, from, savedPosition) {
+    if (to.name === from.name) {
+      to.meta?.scrollPos && (to.meta.scrollPos.top = 0)
+      return { left: 0, top: 0 }
+    }
+    const scrollpos = savedPosition || to.meta?.scrollPos || { left: 0, top: 0 }
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(scrollpos)
+      }, 0)
+    })
   },
   routes: [
     {
@@ -16,7 +37,10 @@ const router = createRouter({
       path: '/references',
       name: 'references',
       component: () => import('@views/ReferencesView.vue'),
-      meta: { layout: 'default' }
+      meta: { layout: 'default', scrollPos: {
+        top: 0,
+        left: 0
+      } }
     },
     {
       path: '/references/:id',
@@ -41,6 +65,11 @@ const router = createRouter({
       meta: { layout: 'fullscreen' }
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  from.meta?.scrollPos && (from.meta.scrollPos.top = document.documentElement.scrollTop)
+  return next()
 })
 
 export default router
