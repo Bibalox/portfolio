@@ -117,7 +117,7 @@ export const en = {
       }
     },
     strengths: {
-      title: 'Highlights',
+      title: 'Key strengths',
       list: {
         'team-work': 'Teamwork',
         discipline: 'Rigor & discipline',
@@ -150,5 +150,5 @@ export const en = {
     title: 'Oh no!',
     message: 'This page doesn’t seem to exist 😢',
     buttonLabel: 'Go back home'
-  } 
+  }
 }

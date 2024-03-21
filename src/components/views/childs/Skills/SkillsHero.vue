@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import MainButton from '@common/MainButton.vue'
+
+const i18n = useI18n()
+const locale = i18n.locale ?? 'fr'
 </script>
 
 <template>
@@ -9,7 +13,7 @@ import MainButton from '@common/MainButton.vue'
     <div class="skills-hero__content">
       <h2 class="skills-hero__title title-sm" v-text="$t('skills.hero.title')" />
       <main-button
-        type="file" to="/cv_jean-baptiste_bal_fr.pdf"
+        type="file" :to="`/cv_jean-baptiste_bal_${locale}.pdf`"
         :label="$t('skills.hero.buttonLabel')"
       />
     </div>
