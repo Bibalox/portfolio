@@ -32,7 +32,7 @@ const locale = i18n.locale ?? 'fr'
   height: 256px;
   justify-content: center;
   overflow: hidden;
-  padding: 0 64px;
+  padding: 0 32px;
   position: relative;
   width: 100%;
 

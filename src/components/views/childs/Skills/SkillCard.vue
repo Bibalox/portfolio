@@ -31,5 +31,9 @@ defineProps<{ title: string }>()
     flex-direction: column;
     gap: 40px;
   }
+
+  @media (max-width: 680px) {
+    min-width: unset;
+  }
 }
 </style>
