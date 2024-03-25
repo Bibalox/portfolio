@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import KeyPoint from '@common/KeyPoint.vue'
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
 
 const i18n = useI18n()
 
@@ -21,9 +21,9 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
         <hr class="app-footer__separator" />
         <key-point
           icon="email-32"
-          label="jeanbaptiste.bal@gmail.com"
+          label="jeanbaptiste.bal@proton.me"
           size="sm"
-          to="mailto:jeanbaptiste.bal@gmail.com"
+          to="mailto:jeanbaptiste.bal@proton.me"
           weight="3"
         />
         <hr class="app-footer__separator" />

@@ -20,9 +20,9 @@ import KeyPoint from '@common/KeyPoint.vue'
         />
         <key-point
           icon="email-40"
-          label="jeanbaptiste.bal@gmail.com"
+          label="jeanbaptiste.bal@proton.me"
           size="lg"
-          to="mailto:jeanbaptiste.bal@gmail.com"
+          to="mailto:jeanbaptiste.bal@proton.me"
         />
       </section>
 
