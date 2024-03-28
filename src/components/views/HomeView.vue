@@ -84,7 +84,7 @@ const links = ['references', 'skills', 'contact']
   }
 
   @media (max-width: 680px) {
-    padding: 0 24px;
+    padding: 0 16px;
     width: 100%;
 
     &__title {
