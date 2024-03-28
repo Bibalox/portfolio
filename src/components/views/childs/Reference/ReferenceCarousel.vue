@@ -76,7 +76,7 @@ carousel.value?.addEventListener('touchmove', event => {
         name="slider"
         class="reference-carousel__slider" tag="div"
       >
-        <div class="reference-carousel__placeholder" />
+        <div key="placeholder" class="reference-carousel__placeholder" />
         <img
           v-for="slide in slides" :key="slide"
           :src="`/references/${id}/0${slide}.jpg`"
@@ -148,8 +148,12 @@ carousel.value?.addEventListener('touchmove', event => {
     margin-bottom: 48px;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 680px) {
     margin-bottom: 32px;
+    
+    &__slider, &__image {
+    aspect-ratio: 1;
+    }
   }
 }
 </style>
