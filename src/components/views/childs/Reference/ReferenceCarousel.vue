@@ -50,22 +50,23 @@ onMounted(() => {
     if (pointer.end - pointer.start < -100) toNextSlide()
     else if (pointer.end - pointer.start > 100) toPrevSlide()
   }, true)
-})
 
 
-// Prevent the scroll while swiping
-const touch = {
-  start: 0,
-  end: 0
-}
+  // Prevent the scroll while swiping
+  const touch = {
+    start: 0,
+    end: 0
+  }
 
-carousel.value?.addEventListener('touchstart', event => {
-  touch.start = event.touches[0].clientY
-})
+  carousel.value?.addEventListener('touchstart', event => {
+    touch.start = event.touches[0].clientY
+  })
 
-carousel.value?.addEventListener('touchmove', event => {
-  touch.end = event.touches[0].clientY
-  if (Math.abs(touch.end - touch.start) < 10) event.preventDefault()
+  carousel.value?.addEventListener('touchmove', event => {
+    touch.end = event.touches[0].clientY
+    console.log(touch.end - touch.start)
+    if (Math.abs(touch.end - touch.start) < 10) event.preventDefault()
+  })
 })
 </script>
 
