@@ -43,7 +43,7 @@ defineEmits(['click'])
   &:hover:not(&--active) {
     --primary-stroke: var(--accent-solid-600);
 
-    background-color: var(--accent-alpha-200);
+    background-color: var(--accent-alpha-300);
     cursor: pointer;
   }
 }
