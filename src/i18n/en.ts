@@ -75,7 +75,7 @@ export const en = {
         hook: 'A few words about the complete overhaul of the France Bureau e-commerce site, in a highly constrained but no less exciting context.',
         paragraphs: [
           'In addition to my day-to-day tasks at France Bureau, I was entrusted with the complete overhaul of the e-commerce site, in order to modernize it both visually and technically. One of the essential components of the project was to maintain the site’s natural referencing, which mainly involved preserving content and respecting the existing navigation.',
-          'At the same time, work was carried out on the visual identity to refresh the company’s image. A complete set of icons was also created for the occasion. The result of this exciting project is a more inviting site, with easier navigation and a better focus on products.'
+          'At the same time, I carried out some work on the visual identity to refresh the company’s image. A complete set of icons was also created for the occasion. The result of this exciting project is a more inviting site, with easier navigation and a better focus on products.'
         ]
       },
       'radio-france': {
@@ -85,7 +85,7 @@ export const en = {
         paragraphs: [
           'The Maison de la Radio is one of Paris’s cultural and architectural jewels. With its concert halls, recording studios and agora, it is much more than a head office for Radio France. The year-round residency of the Orchestre National de France further enhances the aura of this mecca of French culture.',
           'With a view to opening the building to the public, Radio France called on Signalyon to design the building’s interior and exterior signage. The aim was to be as unobtrusive as possible, so as not to detract from the building’s architectural richness.',
-          'Taking into account Radio France’s visual identity, as well as various constraints (accessibility, mechanical strength, resistance to vandalism), we came up with a sober, timeless and effective signage solution.'
+          'Taking into account Radio France’s visual identity, as well as various constraints (accessibility, mechanical strength, resistance to vandalism), I came up with a sober, timeless and effective signage solution.'
         ]
       },
       'lakka-tv': {
@@ -94,7 +94,7 @@ export const en = {
         hook: 'A summary of my first steps in the world of open source and interface design. Two worlds I’m still very fond of more than 10 years later.',
         paragraphs: [
           'Lakka TV is an open source project born in Marseille in 2013. It was originally conceived as a lightweight operating system, optimized for RetroArch (an innovative solution for emulating old video game consoles). Over time, a desire to add a custom interface to RetroArch emerged.',
-          'So it was that during my contribution to the project, several interface prototypes were created. My aim was to create a simple navigation system that would stand out from competing solutions. A set of around a hundred icons was also designed, representing the various consoles, controllers and storage media.',
+          'So it was that during my contribution to the project, I created several interface prototypes. I aimed to create a simple navigation system that would stand out from competing solutions. I also designed a set of around a hundred icons, representing the various consoles, controllers, and storage media.',
           'The two projects are now closely linked, and Lakka TV’s interface has proved so popular that it is now available by default in RetroArch!'
         ]
       },
