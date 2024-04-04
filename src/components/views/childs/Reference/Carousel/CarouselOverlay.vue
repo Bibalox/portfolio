@@ -50,7 +50,7 @@ defineEmits(['next', 'prev'])
     display: flex;
     overflow: hidden;
     position: absolute;
-    z-index: 2000;
+    z-index: 888;
 
     &--back-button {
       border-radius: 12px;
