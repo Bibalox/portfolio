@@ -13,17 +13,15 @@ export const fr = {
   home: {
     hero: {
       paragraphs: [
-        'Bienvenue,',
-        'Je suis Jean-Baptiste, <strong>product designer</strong> spécialisé dans la conception d’<strong>interfaces claires</strong> et de <strong>design system efficients</strong>.',
-        'Si vous souhaitez en savoir plus à mon sujet ne bougez surtout pas, vous-êtes au bon endroit !'
+        'Ensemble, concevons un <strong>design system</strong> efficient pour des interfaces <strong>plus claires et pratiques</strong>.'
       ]
     },
     bio: {
       title: 'En quelques mots',
       paragraphs: [
-        'Amateur de photographie, de travail du bois, d’architecture ou de nouvelles technologies, je suis quelqu’un de <strong>passionné</strong> et de <strong>curieux</strong>.',
         'Chimiste de formation, je décide en 2009 de prendre un virage professionnel pour me rapprocher de ce qui me motive vraiment : le <strong>design graphique</strong>. C’est armé de livres, d’un ordinateur et d’une bonne connexion à internet que je passe mes soirées à apprendre le métier.',
         'J’enchaîne alors projets personnels et contrats en freelance pour acquérir <strong>un maximum d’expérience</strong>. C’est finalement en 2014 que je fais le grand saut, et décide d’accepter ma première mission à temps plein.',
+        'En dehors de mon métier j’apprends la photographie et le travail du bois. J’en profite aussi pour pratiquer un maximum de sports de pleine nature que j’affectionne tant. On peut dire que je suis quelqu’un de <strong>dynamique</strong> et de <strong>curieux</strong>.',
         'Aujourd’hui spécialisé dans le <strong>design d’interface</strong>, je me considère chanceux de pouvoir pratiquer un métier me permettant d’allier <strong>passion</strong> et activité professionnelle.'
       ]
     },
@@ -32,15 +30,15 @@ export const fr = {
       buttonLabel: 'C’est parti !',
       references: {
         title: 'Mes références',
-        description: 'Découvrez mes travaux majeurs de ces dernières années.'
+        description: 'Les travaux que je préfère.'
       },
       skills: {
         title: 'Mes compétences',
-        description: 'Apprenez-en plus sur mes capacités et mes connaissances.'
+        description: 'Des points clés pour y voir clair.'
       },
       contact: {
         title: 'Mes coordonnées',
-        description: 'Contactez-moi pour en savoir encore plus à mon sujet !'
+        description: 'Et si on travaillait ensemble ?'
       }
     }
   },
@@ -53,6 +51,7 @@ export const fr = {
       'studio-base-2': {
         title: 'Studio Base 2',
         subtitle: 'Design UI',
+        hook: 'Découvrez comment j’ai été emmené à créer, intégrer et maintenir un design system multi-plateformes et multi-marques complet.',
         paragraphs: [
           'Nommé jusqu’à peu Abvent, Studio Base 2 propose des solutions logicielles pour les acteurs des métiers du bâtiment (architecture, maîtrise d’œuvre...)',
           'Initialement vendus et développés séparément, chaque logiciel avait une interface unique et une logique de navigation spécifique. Voyant une opportunité de croissance, Studio Base 2 a fait appel à moi pour unifier ces interfaces.',
@@ -63,6 +62,7 @@ export const fr = {
       'bee-buzziness': {
         title: 'Bee Buzziness',
         subtitle: 'Design UI/UX',
+        hook: 'Un aperçu des méthodes employées — avec l’aide d’une équipe aux compétences mixtes — pour assurer la transition vers des méthodes de conceptions d’interfaces tournées vers nos utilisateurs.',
         paragraphs: [
           'Afin d’orienter son offre vers le grand public, Bee Buzziness m’a confié la mission d’intégrer l’utilisateur au cœur même des méthodes de conception tout en normalisant visuellement les différents produits. J’ai ainsi créé une équipe mixte - une designeuse UX et un designer UI - pour pouvoir répondre de façon efficace à ces problématiques.',
           'Côté UX, nous avons mis en place plusieurs outils de conception efficaces comme des ateliers de co-construction ou encore une méthodologie normalisée de test utilisateur.',
@@ -72,14 +72,16 @@ export const fr = {
       'france-bureau': {
         title: 'France Bureau',
         subtitle: 'Design UI',
+        hook: 'Quelques mots sur la refonte complète du site marchand de France Bureau dans un cadre de contrainte fort, mais non moins passionnant.',
         paragraphs: [
-          'Au delà de mes tâches quotidiennes chez France Bureau, il m’a été confié la refonte complète du site vitrine afin de le moderniser visuellement autant que techniquement. Une des composantes essentielles du projet a été le maintien du référencement naturel, qui s’est principalement traduit par la conservation des contenus et un grand respect de la navigation existante.',
+          'Au delà de mes tâches quotidiennes chez France Bureau, il m’a été confié la refonte complète du site marchand afin de le moderniser visuellement autant que techniquement. Une des composantes essentielles du projet a été le maintien du référencement naturel, qui s’est principalement traduit par la conservation des contenus et un grand respect de la navigation existante.',
           'Un travail sur l’identité visuelle a été mené en parallèle afin de rafraichir l’image de la société. Un set complet d’icônes a aussi été créé pour l’occasion. De ce travail passionnant est ressorti un site plus accueillant où la navigation est facilitée et les produits mieux mis en avant.'
         ]
       },
       'radio-france': {
         title: 'Radio France',
         subtitle: 'Signalétique',
+        hook: 'Apprenez en plus au sujet d’un des projets dont je suis le plus fier : la mise en place d’une signalétique complète pour la Maison de la Radio à Paris.',
         paragraphs: [
           'La Maison de la Radio est un des joyaux culturels et architecturaux de la ville de Paris. Entre ses salles de concert, ses studios d’enregistrement et son agora, elle est pour Radio France bien plus qu’un siège social. La résidence à l’année de l’Orchestre National de France vient amplifier d’autant plus l’aura de ce haut lieu de la culture française.',
           'Dans une optique d’ouverture au public, Radio France a fait appel à Signalyon pour réaliser la signalétique intérieure et extérieure du bâtiment. L’objectif était d’être le plus discret possible afin de ne pas dénaturer la richesse architecturale du bâtiment.',
@@ -89,6 +91,7 @@ export const fr = {
       'lakka-tv': {
         title: 'Lakka TV',
         subtitle: 'Design UI',
+        hook: 'Un résumé de mes premiers pas dans le monde de l’open source mais aussi celui du design d’interface. Deux univers que j’affectionne encore beaucoup plus de 10 ans après.',
         paragraphs: [
           'Lakka TV est un projet open source né à Marseille en 2013. Il était à l’origine pensé comme un système d’exploitation léger, optimisé pour RetroArch (une solution innovante d’émulation de vieilles consoles de jeux vidéos). Avec le temps, une volonté d’y ajouter un interface sur mesure à RetroArch est apparue.',
           'C’est ainsi que durant ma période de contribution au projet, plusieurs prototypes d’interface ont vu le jour. L’objectif pour moi étant d’avoir une navigation simple, se démarquant des solutions concurrentes. Un set d’une centaine d’icones a aussi été conçu, représentant les différentes consoles, manettes et supports de stockage.',
@@ -98,6 +101,7 @@ export const fr = {
       'freelance': {
         title: 'Freelance',
         subtitle: 'Missions diverses',
+        hook: 'Lumière sur quelques-uns de mes premiers travaux. Malgré quelques maladresses de jeunesse, je garde toujours un oeil attendri sur mes premières créations.',
         paragraphs: [
           'Durant mes premières années d’apprentissage, j’ai pensé qu’allier la pratique à la théorie serait un excellent moyen de progresser dans le métier. J’ai donc décidé de me lancer en tant que freelance en complément à mon travail de l’époque.',
           'J’ai eu l’occasion de travailler sur de nombreux projets me permettant de découvrir les différents aspects du métier : création d’identité visuelle, publication print, développement web... J’ai volontairement multiplié les champs d’action pour avoir une vision d’ensemble du métier, ce qui m’est encore utile aujourd’hui !'
