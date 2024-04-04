@@ -42,7 +42,7 @@ const getJunctionType = (index: number, size: number) => {
               :title="$t(`references.data.${reference.id}.title`)"
               :subtitle="$t(`references.data.${reference.id}.subtitle`)"
             />
-            <p class="reference-links__summary paragraph-sm" v-text="$t(`references.data.${reference.id}.paragraphs[0]`)" />
+            <p class="reference-links__summary paragraph-sm" v-text="$t(`references.data.${reference.id}.hook`)" />
             <main-button :label="$t('references.buttonLabels.next')" :to="`/references/${reference.id}`" />
           </div>
         </div>
@@ -93,6 +93,7 @@ const getJunctionType = (index: number, size: number) => {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    justify-content: space-between;
     overflow: hidden;
     padding: 32px 40px 16px;
   }
@@ -100,6 +101,7 @@ const getJunctionType = (index: number, size: number) => {
   &__summary {
     color: var(--system-solid-700);
     display: -webkit-box;
+    flex: 1;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -131,10 +133,6 @@ const getJunctionType = (index: number, size: number) => {
 
     &__thumbnail {
       height: 216px;
-    }
-
-    &__summary {
-      -webkit-line-clamp: 3;
     }
   }
 }
