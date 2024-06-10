@@ -31,7 +31,7 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
           icon="location-32"
           label="Grenoble"
           size="sm"
-          to="https://www.qwant.com/maps/#map=12.35/45.1831393/5.7477362"
+          to="https://maps.app.goo.gl/fnTUdjwL4dmDWvkM7"
           weight="2"
           target="_blank"
         />
