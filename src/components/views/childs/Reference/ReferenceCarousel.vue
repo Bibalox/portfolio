@@ -138,7 +138,7 @@ onMounted(() => {
     pointer-events: none;
     position: relative;
     height: 100%;
-    width: 100%;
+    width: auto;
     
     &:first-child, &:last-child {
       visibility: hidden;
