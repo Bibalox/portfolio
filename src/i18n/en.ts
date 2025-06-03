@@ -8,7 +8,7 @@ export const en = {
       home: 'Home',
       references: 'References',
       skills: 'Expertise',
-      contact: 'My world'
+      world: 'My world'
     }
   },
   home: {
