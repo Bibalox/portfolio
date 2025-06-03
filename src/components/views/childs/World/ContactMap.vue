@@ -276,13 +276,21 @@
 <style lang="scss">
 .contact-map {
   align-items: center;
-  border-radius: 8px;
+  aspect-ratio: 1;
+  border-radius: 16px;
   display: flex;
+  flex: 1;
   justify-content: center;
   overflow: hidden;
+  min-width: 360px;
+  width: 100%;
 
   &__content {
     width: 100%;
+  }
+
+  @media (max-width: 680px) {
+    min-width: unset;
   }
 }
 </style>

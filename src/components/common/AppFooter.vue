@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ArticleHeader from '@common/ArticleHeader.vue'
 import KeyPoint from '@common/KeyPoint.vue'
 import { useI18n } from 'vue-i18n'
 
@@ -9,8 +10,8 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
 
 <template>
   <footer class="app-footer">
-    <div class="app-footer__top">
-      <div class="app-footer__top-wrapper">
+    <article class="app-footer__top">
+      <div class="app-footer__top-wrapper app-footer__top-wrapper--large">
         <key-point
           icon="telephone-32"
           label="06 52 13 24 39"
@@ -36,7 +37,32 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
           target="_blank"
         />
       </div>
-    </div>
+      <div class="app-footer__top-wrapper app-footer__top-wrapper--small">
+        <article-header :title="$t('common.appFooter.title')" size="sm" />
+        <hr class="app-footer__separator" />
+        <key-point
+          icon="telephone-40"
+          label="06 52 13 24 39"
+          size="lg"
+          to="tel:+33652132439"
+        />
+        <hr class="app-footer__separator" />
+        <key-point
+          icon="email-40"
+          label="jeanbaptiste.bal@proton.me"
+          size="lg"
+          to="mailto:jeanbaptiste.bal@proton.me"
+        />
+        <hr class="app-footer__separator" />
+        <key-point
+          icon="location-40"
+          label="Grenoble"
+          size="lg"
+          to="https://maps.app.goo.gl/fnTUdjwL4dmDWvkM7"
+          target="_blank"
+        />
+      </div>
+    </article>
     <div class="app-footer__bottom">
       <span class="label-xs" v-text="bottomMessage" />
     </div>
@@ -69,6 +95,12 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
     gap: 16px;
     padding: 20px;
     width: 100%;
+
+    &--small {
+      align-items: start;
+      flex-direction: column;
+      display: none;
+    }
   }
 
   &__separator {
@@ -78,6 +110,11 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
     height: 32px;
     margin: 0;
     width: 1px;
+
+    @media (max-width: 680px) {
+      height: 1px;
+      width: 100%;
+    }
   }
 
   &__bottom {
@@ -98,9 +135,23 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
   }
 
   @media (max-width: 680px) {
-    margin-top: 40px;
+    margin: 24px 0 16px;
 
     &__top {
+      padding: 0 16px;
+    }
+
+    &__top-wrapper {
+      &--large {
+        display: none;
+      }
+
+      &--small {
+        display: flex;
+      }
+    }
+
+    &__bottom {
       display: none;
     }
 

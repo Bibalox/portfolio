@@ -5,16 +5,16 @@ defineProps<{ title: string }>()
 </script>
 
 <template>
-  <article class="skill-card">
+  <article class="section-card">
     <article-header :title="title" size="sm" />
-    <div class="skill-card__content">
+    <div class="section-card__content">
       <slot />
     </div>
   </article>
 </template>
 
 <style lang="scss">
-.skill-card {
+.section-card {
   background-color: var(--background-secondary);
   border: 1px solid var(--stroke-medium);
   border-radius: 18px;

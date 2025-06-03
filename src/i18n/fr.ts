@@ -1,13 +1,14 @@
 export const fr = {
   common: {
     appFooter: {
+      title: 'On s’appelle ?',
       message: 'Conçu et développé avec amour par mes soins'
     },
     appHeader: {
       home: 'Accueil',
-      references: 'Références',
-      skills: 'Compétences',
-      contact: 'Contact'
+      references: 'Parcours',
+      skills: 'Savoir-faire',
+      world: 'Mon univers'
     }
   },
   home: {
@@ -29,16 +30,16 @@ export const fr = {
       title: 'Alors, par où on commence ?',
       buttonLabel: 'C’est parti !',
       references: {
-        title: 'Mes références',
-        description: 'Les travaux que je préfère.'
+        title: 'Parcours',
+        description: 'Les travaux qui me définissent'
       },
       skills: {
-        title: 'Mes compétences',
-        description: 'Des points clés pour y voir clair.'
+        title: 'Savoir-faire',
+        description: 'Mes forces en quelques mots'
       },
-      contact: {
-        title: 'Mes coordonnées',
-        description: 'Et si on travaillait ensemble ?'
+      world: {
+        title: 'Mon univers',
+        description: 'Pour en savoir plus à mon sujet'
       }
     }
   },
@@ -148,6 +149,34 @@ export const fr = {
     hero: {
       title: 'Vous préférez consulter tout ça sur papier ?',
       buttonLabel: 'Téléchargez mon CV'
+    }
+  },
+  world: {
+    creative: {
+      title: 'Mon côté créatif',
+      paragraphs: [
+        'Parce que j’adore la création sous toutes ses formes, j’ai décidé de regrouper mes projets majeurs sous un concept abstrait: Project 67.',
+        'Chaque création que je considère suffisamment intéressante fait l’objet d’un projet.',
+        'D’un côté, je poste un résumé visuel sur Instagram. De l’autre, j’écris sur le déroulement du projet sur Medium.'
+      ],
+      links: {
+        instagram: 'Voir sur Instagram',
+        medium: 'Voir sur Medium'
+      }
+    },
+    profilePicture: {
+      alt: 'Une simple photo de moi'
+    },
+    technical: {
+      title: 'Mon côté technique',
+      paragraphs: [
+        'Je dis souvent qu’un bon designer doit comprendre le matériau qu’il utilise.',
+        'En interface, on utilise du code pour façonner nos pages. C’est pourquoi je mets un point d’honneur à connaître les fondamentaux du développement. C’est un bon moyen de concevoir des interfaces techniquement réalisables, et de faire voir le jour à mes idées.',
+        'Tous mes projets personnels (à l’image de ce portfolio) sont accessibles sur GitHub, n’hésitez pas à aller y jeter un oeil !'
+      ],
+      links: {
+        github: 'Voir sur Github'
+      }
     }
   },
   notFound: {

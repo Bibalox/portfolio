@@ -2,7 +2,7 @@
 import AppHeaderLink from './childs/AppHeader/AppHeaderLink.vue'
 import ThemeSwitcher from '@common/ThemeSwitcher.vue'
 
-const routes = ['home', 'references', 'skills', 'contact']
+const routes = ['home', 'references', 'skills', 'world']
 </script>
 
 <template>

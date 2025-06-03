@@ -1,13 +1,14 @@
 export const en = {
   common: {
     appFooter: {
+      title: 'Let’s get in touch!',
       message: 'Designed and developed with love by myself'
     },
     appHeader: {
       home: 'Home',
       references: 'References',
-      skills: 'Skills',
-      contact: 'Contact'
+      skills: 'Expertise',
+      contact: 'My world'
     }
   },
   home: {
@@ -29,16 +30,16 @@ export const en = {
       title: 'So, where do we start?',
       buttonLabel: 'Here we go!',
       references: {
-        title: 'My references',
-        description: 'The works I like best.'
+        title: 'References',
+        description: 'The work that defines me'
       },
       skills: {
-        title: 'My skills',
-        description: 'Key points to get to know me.'
+        title: 'Expertise',
+        description: 'My strengths in a nutshell'
       },
-      contact: {
+      world: {
         title: 'My details',
-        description: 'Let’s work together!'
+        description: 'Find out more about me'
       }
     }
   },
@@ -148,6 +149,34 @@ export const en = {
     hero: {
       title: 'Would you rather see it all on paper?',
       buttonLabel: 'Download my résumé'
+    }
+  },
+  world: {
+    creative: {
+      title: 'My creative side',
+      paragraphs: [
+        'Because I love creation in all its forms, I’ve decided to group my major projects under an abstract concept: Project 67.',
+        'Every creation I consider interesting enough is the subject of a project.',
+        'On the one hand, I post a visual summary on Instagram. On the other, I write about the progress of the project on Medium.'
+      ],
+      links: {
+        instagram: 'See on Instagram',
+        medium: 'See on Medium'
+      }
+    },
+    profilePicture: {
+      alt: 'A simple photo of me'
+    },
+    technical: {
+      title: 'My technical side',
+      paragraphs: [
+        'I often say that a good designer needs to understand the material he’s using.',
+        'In the interface, we use code to shape our pages. That’s why I make a point of knowing the fundamentals of development. It’s a good way of designing technically feasible interfaces and bringing my ideas to life.',
+        'All my personal projects (like this portfolio) are available on GitHub, so don’t hesitate to take a look!'
+      ],
+      links: {
+        github: 'See on Github'
+      }
     }
   },
   notFound: {

@@ -50,10 +50,10 @@ const router = createRouter({
       meta: { layout: 'default' }
     },
     {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('@views/ContactView.vue'),
-      meta: { layout: 'fullscreen' }
+      path: '/world',
+      name: 'world',
+      component: () => import('@views/WorldView.vue'),
+      meta: { layout: 'default' }
     },
     {
       path: '/:pathMatch(.*)*',

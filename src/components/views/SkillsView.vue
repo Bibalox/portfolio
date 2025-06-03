@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import SkillCard from './childs/Skills/SkillCard.vue'
 import SkillsHero from './childs/Skills/SkillsHero.vue'
 import SkillSlider from './childs/Skills/SkillSlider.vue'
+import SectionCard from '@common/SectionCard.vue'
 import KeyPoint from '@common/KeyPoint.vue'
 
 const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving', 'smile']
@@ -9,7 +9,7 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
 
 <template>
   <section class="skill-section">
-    <skill-card :title="$t('skills.tools.title')">
+    <section-card :title="$t('skills.tools.title')">
       <div class="skill-section__content-group skill-section__content-group--sliders">
         <skill-slider :label="$t('skills.tools.list.figma')" :percentage="100" />
         <skill-slider :label="$t('skills.tools.list.sketch')" :percentage="90" />
@@ -19,9 +19,9 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
         <skill-slider :label="$t('skills.tools.list.vue')" :percentage="70" />
         <skill-slider :label="$t('skills.tools.list.typescript')" :percentage="40" />
       </div>
-    </skill-card>
+    </section-card>
 
-    <skill-card :title="$t('skills.strengths.title')">
+    <section-card :title="$t('skills.strengths.title')">
       <div class="skill-section__content-group skill-section__content-group--strengths">
         <key-point
           v-for="strength in strengths" :key="strength"
@@ -30,23 +30,23 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
           :label="$t(`skills.strengths.list.${strength}`)"
         />
       </div>
-    </skill-card>
+    </section-card>
 
-    <skill-card :title="$t('skills.languages.title')">
+    <section-card :title="$t('skills.languages.title')">
       <div class="skill-section__content-group skill-section__content-group--sliders">
         <skill-slider :label="$t('skills.languages.list.french')" :percentage="100" />
         <skill-slider :label="$t('skills.languages.list.english')" :percentage="90" />
       </div>
-    </skill-card>
+    </section-card>
 
-    <skill-card :title="$t('skills.diplomas.title')">
+    <section-card :title="$t('skills.diplomas.title')">
       <div class="skill-section__content-group skill-section__content-group--diplomas">
         <span
           v-for="diploma in $tm('skills.diplomas.list')" :key="diploma"
           class="skill-section__label label-sm" v-text="diploma"
         />
       </div>
-    </skill-card>
+    </section-card>
     <skills-hero />
   </section>
 </template>

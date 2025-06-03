@@ -2,7 +2,7 @@
 import HomeHero from './childs/Home/HomeHero.vue'
 import HomeLink from './childs/Home/HomeLink.vue'
 
-const links = ['references', 'skills', 'contact']
+const links = ['references', 'skills', 'world']
 </script>
 
 <template>

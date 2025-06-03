@@ -15,7 +15,7 @@ import ArticleHeader from '@common/ArticleHeader.vue'
       <p
         v-for="(paragraph, index) in $tm(`references.data.${$route.params.id}.paragraphs`)"
         :key="index"
-        class="reference-section__paragraph paragraph-md"
+        class="reference-section__paragraph paragraph-sm"
         v-text="paragraph"
       />
     </div>
