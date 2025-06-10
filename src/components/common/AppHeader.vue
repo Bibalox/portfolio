@@ -7,8 +7,8 @@ const routes = ['home', 'references', 'skills', 'world']
 
 <template>
   <header class="app-header">
-    <div class="app-header__background" />
     <div class="app-header__wrapper">
+      <div class="app-header__background" />
       <router-link to="/" class="app-header__logo-link">
         <svg class="app-header__logo app-header__logo--full">
           <use href="#logo-full" />
@@ -50,9 +50,11 @@ const routes = ['home', 'references', 'skills', 'world']
   &__background {
     background-color: var(--background-primary);
     height: 100%;
+    left: 0;
     opacity: .6;
     position: absolute;
     width: 100%;
+    z-index: -1;
   }
 
   &__wrapper {
@@ -61,7 +63,6 @@ const routes = ['home', 'references', 'skills', 'world']
     gap: 40px;
     height: 80px;
     max-width: 1200px;
-    position: relative;
     width: 100%;
   }
 
@@ -113,10 +114,29 @@ const routes = ['home', 'references', 'skills', 'world']
   }
 
   @media (max-width: 680px) {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     bottom: 0;
-    border-top: 1px solid var(--system-solid-250);
-    padding: 0 16px;
+    padding: 8px;
     top: unset;
+
+    &__background {
+      border-radius: 24px;
+      opacity: .7;
+    }
+
+    &__wrapper {
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--stroke-medium);
+      border-radius: 24px;
+      height: unset;
+      padding: 7px 4px;
+    }
+
+    &__nav {
+      gap: 0;
+    }
 
     &__logo, &__logo-link, &__theme-switcher-wrapper {
       display: none;

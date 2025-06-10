@@ -61,7 +61,7 @@ defineProps<{ id: string }>()
     flex-direction: column;
     gap: 8px;
     height: auto;
-    padding: 0;
+    padding: 2px 0 0;
 
     &__icon {
       --primary-stroke: var(--system-solid-700);
