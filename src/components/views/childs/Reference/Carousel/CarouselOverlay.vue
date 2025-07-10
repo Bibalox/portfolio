@@ -53,13 +53,13 @@ defineEmits(['next', 'prev'])
     z-index: 888;
 
     &--back-button {
-      border-radius: 12px;
+      border-radius: var(--radius-xl);
       top: 16px;
       left: 16px;
     }
 
     &--navigation {
-      border-radius: 15px;
+      border-radius: var(--radius-xl);
       bottom: 24px;
       box-sizing: border-box;
       justify-content: space-between;

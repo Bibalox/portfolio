@@ -18,7 +18,7 @@ const animationDuration = Math.random() * 2 + 2
 .skill-slider {
   align-items: center;
   background-color: var(--system-alpha-100);
-  border-radius: 10px;
+  border-radius: 12px;
   box-sizing: border-box;
   display: flex;
   height: 40px;

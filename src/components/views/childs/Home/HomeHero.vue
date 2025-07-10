@@ -22,7 +22,7 @@
   padding: 0 24px;
   width: 100%;
 
-  $radius: 20px;
+  $radius: 28px;
 
   &__wrapper {
     align-items: center;

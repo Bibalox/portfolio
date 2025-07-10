@@ -56,7 +56,7 @@ const textSizes = {
     width: 3px;
 
     &--sm {
-      margin: 4px 0;
+      margin: 8px 0;
     }
   }
 

@@ -55,10 +55,8 @@ body {
   min-height: 100%;
   
   &--default-layout {
-    padding: 80px 0 0;
-
     @media (max-width: 680px) {
-      padding: 0 0 81px;
+      padding: 0 0 104px;
     }
   }
 }

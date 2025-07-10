@@ -8,7 +8,6 @@ const routes = ['home', 'references', 'skills', 'world']
 <template>
   <header class="app-header">
     <div class="app-header__wrapper">
-      <div class="app-header__background" />
       <router-link to="/" class="app-header__logo-link">
         <svg class="app-header__logo app-header__logo--full">
           <use href="#logo-full" />
@@ -36,33 +35,27 @@ const routes = ['home', 'references', 'skills', 'world']
 <style lang="scss">
 .app-header {
   align-items: center;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: 0 40px;
-  position: fixed;
+  padding: 24px 20px;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 999;
 
-  &__background {
-    background-color: var(--background-primary);
-    height: 100%;
-    left: 0;
-    opacity: .6;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
-
   &__wrapper {
     align-items: center;
+    background-color: var(--background-secondary);
+    border: 1px solid rgba(255, 255, 255, .03);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .02), 0 4px 20px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
     display: flex;
-    gap: 40px;
-    height: 80px;
+    gap: 32px;
+    height: 76px;
     max-width: 1200px;
+    padding: 0 16px 0 22px;
     width: 100%;
   }
 
@@ -85,13 +78,11 @@ const routes = ['home', 'references', 'skills', 'world']
   &__nav {
     display: flex;
     flex: 1;
-    gap: 8px;
+    gap: 40px;
     justify-content: flex-end;
   }
 
   @media (max-width: 960px) {
-    padding: 0 24px;
-
     &__wrapper {
       gap: 16px;
     }
@@ -117,25 +108,19 @@ const routes = ['home', 'references', 'skills', 'world']
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     bottom: 0;
-    padding: 8px;
+    padding: 12px 8px;
+    position: fixed;
     top: unset;
 
-    &__background {
-      border-radius: 24px;
-      opacity: .7;
-    }
-
     &__wrapper {
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--stroke-medium);
-      border-radius: 24px;
-      height: unset;
-      padding: 7px 4px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 -2px 2px rgba(0, 0, 0, .02), 0 -4px 20px rgba(0, 0, 0, .05);
+      height: 80px;
+      padding: 0 12px;
     }
 
     &__nav {
-      gap: 0;
+      gap: 8px;
     }
 
     &__logo, &__logo-link, &__theme-switcher-wrapper {

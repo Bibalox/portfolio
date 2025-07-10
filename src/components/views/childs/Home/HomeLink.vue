@@ -25,8 +25,8 @@ defineProps<{
 .home-link {
   align-items: center;
   background-color: var(--background-secondary);
-  border: 1px solid var(--stroke-medium);
-  border-radius: 18px;
+  border: 1px solid var(--stroke-soft);
+  border-radius: var(--radius-md);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

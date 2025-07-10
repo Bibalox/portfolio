@@ -1,5 +1,6 @@
 import './styles/font.scss'
 import './styles/colors.scss'
+import './styles/dimensions.scss'
 
 import { createApp } from 'vue'
 import { getUserTheme, setTheme } from './utils/themes'

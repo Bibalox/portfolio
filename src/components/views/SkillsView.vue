@@ -58,7 +58,7 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
   flex-wrap: wrap;
   gap: 32px;
   max-width: 1200px;
-  padding: 24px 40px 0;
+  padding: 0 40px;
   width: 100%;
 
   &__content-group {
@@ -87,7 +87,6 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
 
   @media (max-width: 960px) {
     gap: 24px;
-    padding: 16px 40px 0;
   }
 
   @media (max-width: 680px) {

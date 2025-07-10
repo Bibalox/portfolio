@@ -39,7 +39,7 @@ const updateTheme = (theme: 'dark' | 'light') => {
   align-items: center;
   background-color: var(--accent-alpha-200);
   border: 1px solid var(--accent-alpha-100);
-  border-radius: 22px;
+  border-radius: var(--radius-xl);
   box-sizing: border-box;
   display: flex;
   gap: 4px;

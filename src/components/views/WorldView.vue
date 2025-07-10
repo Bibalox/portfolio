@@ -67,7 +67,7 @@ import KeyPoint from '@common/KeyPoint.vue'
   flex-wrap: wrap;
   gap: 32px;
   max-width: 1200px;
-  padding: 24px 40px 0;
+  padding: 0 40px;
   width: 100%;
 
   &__paragraph-wrapper {
@@ -97,7 +97,7 @@ import KeyPoint from '@common/KeyPoint.vue'
     aspect-ratio: 1;
     object-fit: cover;
     box-sizing: border-box;
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     flex: 1;
     min-width: 360px;
     width: 100%;
@@ -109,7 +109,6 @@ import KeyPoint from '@common/KeyPoint.vue'
 
   @media (max-width: 960px) {
     gap: 24px;
-    padding: 16px 40px 0;
   }
 
   @media (max-width: 680px) {

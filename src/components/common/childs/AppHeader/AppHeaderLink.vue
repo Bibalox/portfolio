@@ -14,20 +14,33 @@ defineProps<{ id: string }>()
     <board-icon :id="`${id}-32`" class="app-header-link__icon" />
     <span class="app-header-link__label app-header-link__label--lg label-md" v-text="$t(`common.appHeader.${id}`)" />
     <span class="app-header-link__label app-header-link__label--sm label-xs" v-text="$t(`common.appHeader.${id}`)" />
+    <hr class="app-header-link__decoration" />
   </router-link>
 </template>
 
 <style lang="scss">
 .app-header-link {
   align-items: center;
-  border: 1px solid transparent;
   box-sizing: border-box;
-  border-radius: 12px;
   display: flex;
-  height: 40px;
-  padding: 0 15px;
+  height: 42px;
+  justify-content: center;
+  position: relative;
   text-decoration: none;
-  transition: background-color .3s, border-color .3s;
+  transition: color .3s;
+
+  &__decoration {
+    background-color: transparent;
+    border: none;
+    border-radius: var(--radius-xl);
+    bottom: 0;
+    height: 3px;
+    margin: 0;
+    position: absolute;
+    transition: background-color .3s, transform .3s;
+    transform: scaleX(.6);
+    width: 34px;
+  }
 
   &__icon {
     display: none;
@@ -48,8 +61,10 @@ defineProps<{ id: string }>()
   }
 
   &--active, &:hover {
-    background-color: var(--accent-alpha-200);
-    border-color: var(--accent-alpha-100);
+    .app-header-link__decoration {
+      background-color: var(--accent-solid-600);
+      transform: scaleX(1);
+    }
 
     .app-header-link__label {
       color: var(--accent-solid-600);
@@ -59,7 +74,7 @@ defineProps<{ id: string }>()
   @media (max-width: 680px) {
     flex: 1;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     height: auto;
     padding: 2px 0 0;
 
@@ -80,6 +95,10 @@ defineProps<{ id: string }>()
         color: var(--system-solid-700);
         display: block;
       }
+    }
+
+    &__decoration {
+      display: none;
     }
 
     &--home {

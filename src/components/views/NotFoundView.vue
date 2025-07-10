@@ -41,7 +41,7 @@ import MainButton from '@common/MainButton.vue'
   &__card {
     align-items: center;
     background-color: var(--cover-soft);
-    border-radius: 40px;
+    border-radius: var(--radius-lg);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

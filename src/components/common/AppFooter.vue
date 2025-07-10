@@ -88,18 +88,21 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
   &__top-wrapper {
     align-items: center;
     background-color: var(--background-secondary);
-    border: 1px solid var(--stroke-medium);
-    border-radius: 20px;
+    border: 1px solid var(--stroke-soft);
+    border-radius: var(--radius-xl);
     box-sizing: border-box;
     display: flex;
     gap: 16px;
-    padding: 20px;
+    padding: 16px 24px;
     width: 100%;
 
     &--small {
       align-items: start;
+      border-radius: var(--radius-md);
       flex-direction: column;
       display: none;
+      gap: 20px;
+      padding: 24px 32px 32px;
     }
   }
 
@@ -112,15 +115,14 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
     width: 1px;
 
     @media (max-width: 680px) {
-      height: 1px;
-      width: 100%;
+      display: none;
     }
   }
 
   &__bottom {
     align-items: center;
     background-color: var(--background-secondary);
-    border-top: 1px solid var(--stroke-medium);
+    border-top: 1px solid var(--stroke-soft);
     box-sizing: border-box;
     color: var(--system-solid-600);
     display: flex;
@@ -135,7 +137,7 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
   }
 
   @media (max-width: 680px) {
-    margin: 24px 0 16px;
+    margin-top: 16px;
 
     &__top {
       padding: 0 16px;

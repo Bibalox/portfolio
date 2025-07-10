@@ -22,11 +22,9 @@ const locale = i18n.locale ?? 'fr'
 
 <style lang="scss">
 .skills-hero {
-  $default-radius: 16px;
-
   align-items: center;
   background: center / cover no-repeat url("/backgrounds/skills-hero.jpeg");
-  border-radius: $default-radius;
+  border-radius: var(--radius-md);
   box-sizing: border-box;
   display: flex;
   height: 256px;
@@ -64,7 +62,7 @@ const locale = i18n.locale ?? 'fr'
     }
 
     &--blur {
-      border-radius: $default-radius;
+      border-radius: var(--radius-md);
       box-shadow: inset 0 0 0 1px var(--stroke-medium);
       -webkit-backdrop-filter: blur(4px);
       backdrop-filter: blur(4px);
@@ -72,17 +70,11 @@ const locale = i18n.locale ?? 'fr'
   }
   
   @media (max-width: 680px) {
-    $small-radius: 14px;
 
-    border-radius: $small-radius;
     height: 512px;
 
     &__content {
       gap: 48px;
-    }
-
-    &__cover--blur {
-      border-radius: $small-radius;
     }
   }
 }

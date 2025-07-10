@@ -16,15 +16,15 @@ defineProps<{ title: string }>()
 <style lang="scss">
 .section-card {
   background-color: var(--background-secondary);
-  border: 1px solid var(--stroke-medium);
-  border-radius: 18px;
+  border: 1px solid var(--stroke-soft);
+  border-radius: var(--radius-md);
   box-sizing: border-box;
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   min-width: 360px;
-  padding: 24px 32px;
+  padding: 24px 32px 32px;
 
   &__content {
     display: flex;

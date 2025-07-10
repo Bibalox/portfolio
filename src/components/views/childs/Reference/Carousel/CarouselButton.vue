@@ -40,7 +40,7 @@ defineEmits(['click'])
   align-items: center;
   background-color: var(--system-alpha-300);
   border: 1px solid var(--system-alpha-100);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   box-sizing: border-box;
   display: flex;
   gap: 8px;

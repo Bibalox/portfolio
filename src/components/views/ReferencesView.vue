@@ -60,7 +60,7 @@ const getJunctionType = (index: number, size: number) => {
 .reference-links {
   box-sizing: border-box;
   max-width: 1200px;
-  padding: 16px 40px 0;
+  padding: 0 40px;
 
   &__article {
     display: flex;
@@ -68,8 +68,8 @@ const getJunctionType = (index: number, size: number) => {
 
   &__card {
     background-color: var(--background-secondary);
-    border: 1px solid var(--stroke-medium);
-    border-radius: 16px;
+    border: 1px solid var(--stroke-soft);
+    border-radius: var(--radius-sm);
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -81,7 +81,7 @@ const getJunctionType = (index: number, size: number) => {
     object-fit: cover;
     width: 100%;
 
-    border-radius: 8px;
+    border-radius: var(--radius-xs);
     border: 1px solid var(--system-alpha-200);
     height: 320px;
     box-sizing: border-box;
@@ -106,12 +106,12 @@ const getJunctionType = (index: number, size: number) => {
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
   }
 
   @media (max-width: 960px) {
     max-width: 880px;
-    padding: 24px 40px 0;
 
     &__card {
       grid-template-columns: 1fr;

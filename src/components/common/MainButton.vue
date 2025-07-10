@@ -30,13 +30,13 @@ withDefaults(defineProps<Props>(), {
 .main-button {
   align-items: center;
   border: 2px solid var(--accent-solid-600);
-  border-radius: 9px;
+  border-radius: var(--radius-xl);
   box-sizing: border-box;
   color: var(--accent-solid-600);
   display: flex;
   height: 36px;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 12px;
   text-decoration: none;
   transition: background-color .2s, transform .2s;
 

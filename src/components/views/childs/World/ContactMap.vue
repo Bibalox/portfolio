@@ -277,7 +277,7 @@
 .contact-map {
   align-items: center;
   aspect-ratio: 1;
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   display: flex;
   flex: 1;
   justify-content: center;
