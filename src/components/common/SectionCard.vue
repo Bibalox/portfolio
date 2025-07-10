@@ -34,6 +34,7 @@ defineProps<{ title: string }>()
 
   @media (max-width: 680px) {
     min-width: unset;
+    padding: 20px 26px 26px;
   }
 }
 </style>
