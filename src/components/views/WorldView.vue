@@ -114,7 +114,7 @@ import KeyPoint from '@common/KeyPoint.vue'
   @media (max-width: 680px) {
     flex-direction: column;
     gap: 16px;
-    padding: 16px 8px 0;
+    padding: 16px 12px 0;
   }
 }
 </style>

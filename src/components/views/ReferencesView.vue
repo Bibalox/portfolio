@@ -124,7 +124,7 @@ const getJunctionType = (index: number, size: number) => {
   }
 
   @media (max-width: 680px) {
-    padding: 24px 8px 0;
+    padding: 24px 12px 0;
 
     &__details {
       gap: 16px;
