@@ -92,7 +92,7 @@ const strengths = ['team-work', 'discipline', 'optimization', 'problem-solving',
   @media (max-width: 680px) {
     flex-direction: column;
     gap: 16px;
-    padding: 16px 16px 0;
+    padding: 16px 8px 0;
   }
 }
 </style>

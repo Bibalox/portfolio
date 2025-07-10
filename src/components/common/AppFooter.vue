@@ -140,7 +140,7 @@ const bottomMessage = new Date().getFullYear() + ' - ' + i18n.t('common.appFoote
     margin-top: 16px;
 
     &__top {
-      padding: 0 16px;
+      padding: 0 8px;
     }
 
     &__top-wrapper {

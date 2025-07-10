@@ -84,11 +84,19 @@ const links = ['references', 'skills', 'world']
   }
 
   @media (max-width: 680px) {
-    padding: 0 16px;
+    padding: 0 8px;
     width: 100%;
+
+    &__paragraph {
+      margin: 32px 8px 0;
+    }
 
     &__title {
       margin: 48px 0 0;
+    }
+
+    &__links {
+      gap: 16px;
     }
   }
 }
