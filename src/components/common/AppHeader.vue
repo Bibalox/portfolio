@@ -108,7 +108,7 @@ const routes = ['home', 'references', 'skills', 'world']
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     bottom: 0;
-    padding: 12px 8px;
+    padding: 8px;
     position: fixed;
     top: unset;
 
