@@ -38,7 +38,7 @@ export const en = {
         description: 'My strengths in a nutshell'
       },
       world: {
-        title: 'My details',
+        title: 'My world',
         description: 'Find out more about me'
       }
     }
